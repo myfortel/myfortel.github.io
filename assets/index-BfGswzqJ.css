@@ -1,0 +1,176 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+.inline-block {
+  display: inline-block
+}
+
+.hide {
+  display: none
+}.cell .cell-top-left {
+    float: left;
+    width: 1em;
+    height: 70%;
+    text-align: left;
+}
+
+.cell .cell-top-middle {
+    float: left;
+    padding-left: 5em;
+    height: 73%;
+    width: 2em;
+    padding-right: 2%;
+    font-weight: 800;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cell .cell-top-right {
+    float: right;
+    width: 6em;
+    height: 3.3em;
+    text-align: center;
+}
+
+.cell .cell-middle {
+    float: left;
+    width: 100%;
+    height: 14%;
+    text-align: center;
+}
+
+.cell .cell-bottom {
+    float: left;
+    width: 100%;
+    height: 13%;
+}
+
+.cell .cell-bottom .cell-bottom-left {
+    float: left;
+    width: 5em;
+    height: 25%;
+    text-align: center;
+}
+
+.cell .cell-bottom .cell-bottom-middle {
+    float: left;
+    width: 27%;
+    height: 25%;
+    text-align: center;
+}
+
+.cell .cell-bottom .cell-bottom-right {
+    float: right;
+    width: 7em;
+    height: 25%;
+    text-align: center;
+}
+
+.ten-year-runtime {
+    color: #a00
+}
+
+.year-runtime {
+    color: #00a
+}
+
+.month-runtime {
+    color: #073
+}
+
+.day-runtime {
+    color: #8000ff
+}.board {
+    width: 840px;
+    height: 760px;
+    font-size: 12px;
+    font-family: Arial,文泉驛正黑,wenquanyi zen hei,儷黑 pro,lihei pro,微軟正黑體,microsoft jhenghei,標楷體,DFKai-SB,sans-serif;
+}
+
+.board .cell {
+    border: 1px solid #000000;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    padding: 2px;
+    width: 210px;
+    height: 190px;
+    font-size: 12px;
+    line-height: 1.1;
+    float: left;
+}
+
+.board .top-row,
+.board .bottom_row {
+    width: 100%;
+    height: 25%;
+}
+
+.board .middle-row {
+    width: 100%;
+    height: 50%;
+}
+
+.board .middle-row .left-col {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.board .middle-row .middle-area {
+    float: left;
+    width: 50%;
+    height: 100%;
+    border: 1px solid #000000;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    font-size: 14px;
+}
+
+.board .middle-row .right-col {
+    float: left;
+    width: 25%;
+    height: 50%;
+}
+
+.vertical {
+    float: left;
+    width: 1em;
+    line-height: 1.1em;
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.space-char-block {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+.config-text {
+    padding-left: 15px;
+    padding-top: 15px;
+}.even-row {
+    background-color: rgba(0,0,0,.05)
+}
+
+.odd-row {
+    background-color: #fff;
+}
