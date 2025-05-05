@@ -1,5 +1,5 @@
 .board {
-    width: 800px;
+    width: 840px;
     height: 760px;
     font-size: 12px;
     font-family: Arial,文泉驛正黑,wenquanyi zen hei,儷黑 pro,lihei pro,微軟正黑體,microsoft jhenghei,標楷體,DFKai-SB,sans-serif;
@@ -11,7 +11,7 @@
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     padding: 2px;
-    width: 200px;
+    width: 210px;
     height: 190px;
     font-size: 12px;
     line-height: 1.1;

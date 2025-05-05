@@ -7,7 +7,7 @@ import {
   CHINESE_ONE_TO_TWELVE,
 } from "../../util/numberUtils";
 
-const yearOptions = arrayRange(1900, 2050).map((num) => {
+const yearOptions = arrayRange(1900, 2100).map((num) => {
   return { label: "" + num, value: num };
 });
 
