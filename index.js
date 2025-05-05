@@ -8866,7 +8866,7 @@ function requireMinorStar () {
 	            },
 	            hasRuntime: () => true,
 	            evalRuntimeGround: (sky) => {
-	                return ground_1.Ground.get([1, 0, 11, 11, 1, 0, 1, 2, 3, 3][sky.index]);
+	                return ground_1.Ground.get([1, 0, 11, 11, 1, 0, 1, 6, 3, 3][sky.index]);
 	            },
 	        });
 	        // 天鉞
@@ -8876,7 +8876,7 @@ function requireMinorStar () {
 	            },
 	            hasRuntime: () => true,
 	            evalRuntimeGround: (sky) => {
-	                return ground_1.Ground.get([7, 8, 9, 9, 7, 8, 7, 6, 5, 5][sky.index]);
+	                return ground_1.Ground.get([7, 8, 9, 9, 7, 8, 7, 2, 5, 5][sky.index]);
 	            },
 	        });
 	        // 文昌
