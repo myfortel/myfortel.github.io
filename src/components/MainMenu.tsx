@@ -1,73 +1,73 @@
-import { useMemo, useState } from "react";
-import { AppstoreOutlined, SettingOutlined } from "@ant-design/icons";
-import type { MenuProps } from "antd";
-import { Menu } from "antd";
-import { Link, useSearchParams } from "react-router-dom";
-import { useCallback } from "react";
+import { useMemo } from "react";
+import { Button } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const MainMenu = ({ defaultValue }: { defaultValue: string }) => {
-  const [current, setCurrent] = useState(defaultValue);
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const urlSearchParams = useMemo(() => {
+  const sharedQuery = useMemo(() => {
     const urlSearchParams = new URLSearchParams();
-    const cal = searchParams.get("cal");
+    const sourceParams = new URLSearchParams(location.search);
+    const cal = sourceParams.get("cal");
     if (cal) {
       urlSearchParams.set("cal", cal);
     }
-    const y = searchParams.get("y");
+    const y = sourceParams.get("y");
     if (y) {
       urlSearchParams.set("y", y);
     }
-    const m = searchParams.get("m");
+    const m = sourceParams.get("m");
     if (m) {
       urlSearchParams.set("m", m);
     }
-    const d = searchParams.get("d");
+    const d = sourceParams.get("d");
     if (d) {
       urlSearchParams.set("d", d);
     }
-    const lp = searchParams.get("lp");
+    const lp = sourceParams.get("lp");
     if (lp === "0" || lp === "1") {
       urlSearchParams.set("lp", lp);
     }
-    const g = searchParams.get("g");
+    const g = sourceParams.get("g");
     if (g) {
       urlSearchParams.set("g", g);
     }
-    return urlSearchParams;
-  }, [searchParams]);
+    return urlSearchParams.toString();
+  }, [location.search]);
 
-  const items: MenuProps["items"] = useMemo(
-    () => [
-      {
-        label: (
-          <Link to={`/buildBoard?${urlSearchParams.toString()}`}>起盤</Link>
-        ),
-        key: "buildBoard",
-        icon: <SettingOutlined />,
-      },
-      {
-        label: (
-          <Link to={`/dayBoards?${urlSearchParams.toString()}`}>全日命盤</Link>
-        ),
-        key: "dayBoards",
-        icon: <AppstoreOutlined />,
-      },
-    ],
-    [urlSearchParams]
-  );
+  const selectedKey = useMemo(() => {
+    if (location.pathname.includes("dayBoards")) {
+      return "dayBoards";
+    }
+    if (location.pathname.includes("buildBoard")) {
+      return "buildBoard";
+    }
+    return defaultValue;
+  }, [defaultValue, location.pathname]);
 
-  const onClick: MenuProps["onClick"] = useCallback((e: any) => {
-    setCurrent(e.key);
-  }, []);
+  const go = (key: "buildBoard" | "dayBoards") => {
+    navigate({
+      pathname: `/${key}`,
+      search: sharedQuery ? `?${sharedQuery}` : "",
+    });
+  };
 
   return (
-    <Menu
-      onClick={onClick}
-      selectedKeys={[current]}
-      mode="horizontal"
-      items={items}
-    />
+    <div style={{ marginBottom: 12 }}>
+      <Button
+        type={selectedKey === "buildBoard" ? "primary" : "default"}
+        onClick={() => go("buildBoard")}
+        style={{ marginRight: 8 }}
+      >
+        起盤
+      </Button>
+      <Button
+        type={selectedKey === "dayBoards" ? "primary" : "default"}
+        onClick={() => go("dayBoards")}
+      >
+        全日命盤
+      </Button>
+    </div>
   );
 };

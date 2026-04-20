@@ -1,4 +1,3 @@
-import { Select, Checkbox } from "antd";
 import { useCallback } from "react";
 import { arrayRange } from "../../util/numberUtils";
 
@@ -13,6 +12,13 @@ const monthOptions = arrayRange(1, 12).map((num) => {
 const dayOptions = arrayRange(1, 31).map((num) => {
   return { label: "" + num, value: num };
 });
+
+const selectStyle = {
+  height: 32,
+  borderRadius: 6,
+  border: "1px solid #d9d9d9",
+  padding: "0 8px",
+};
 
 export const SolarDateInput = ({
   year,
@@ -33,39 +39,43 @@ export const SolarDateInput = ({
     <div>
       <div>
         {" 年: "}
-        <Select
-          placeholder="年份"
-          optionFilterProp="label"
-          onChange={onChangeYear}
-          // filterOption={(input, option) =>
-          //   (option?.label ?? "").startsWith(input)
-          // }
-          options={yearOptions}
-          value={year}
-          style={{ width: 80 }}
-        />
+        <select
+          value={year ?? ""}
+          onChange={(e) => onChangeYear(Number(e.target.value))}
+          style={{ ...selectStyle, width: 80 }}
+        >
+          {yearOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
 
         {" 月: "}
-        <Select
-          placeholder="月份"
-          onChange={onChangeMonth}
-          options={monthOptions}
-          value={month}
-          style={{ width: 80 }}
-        />
+        <select
+          value={month ?? ""}
+          onChange={(e) => onChangeMonth(Number(e.target.value))}
+          style={{ ...selectStyle, width: 80 }}
+        >
+          {monthOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
 
         {" 日: "}
-        <Select
-          placeholder="日子"
-          optionFilterProp="label"
-          onChange={onChangeDay}
-          filterOption={(input, option) =>
-            ("" + (option?.value ?? "")).startsWith(input)
-          }
-          options={dayOptions}
-          value={day}
-          style={{ width: 100 }}
-        />
+        <select
+          value={day ?? ""}
+          onChange={(e) => onChangeDay(Number(e.target.value))}
+          style={{ ...selectStyle, width: 100 }}
+        >
+          {dayOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );

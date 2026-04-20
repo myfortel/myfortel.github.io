@@ -1,13 +1,12 @@
 import { DestinyBoard, DestinyConfig } from "fortel-ziweidoushu";
 import { Board } from "../../components/Board";
 import { DestinyConfigInputPanel } from "../../components/destinyConfigInput/DestinyConfigInputPanel";
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { MainMenu } from "../../components/MainMenu";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import {
   searchParamsToDataStateMapper,
   dataStateToDestinyConfigMapper,
-  dataStateToSearchParamsMapper,
   ConfigDataStateType,
   RuntimeConfigDataStateType,
 } from "./stateMapper";
@@ -15,8 +14,6 @@ import { RuntimeConfigInputPanel } from "../../components/destinyConfigInput/Run
 
 export const BuildBoardView = () => {
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const location = useLocation();
 
   /**
    * parse search params => config data
@@ -32,9 +29,9 @@ export const BuildBoardView = () => {
   const [runtimeConfigDataState, setRuntimeConfigDataState] =
     useState<RuntimeConfigDataStateType>(initialDataState?.runtimeConfig ?? {});
 
-  const [destinyConfig, setDestinyConfig] = useState<DestinyConfig | null>(
-    (configDataState && dataStateToDestinyConfigMapper(configDataState)) ?? null
-  );
+  const destinyConfig = useMemo<DestinyConfig | null>(() => {
+    return (configDataState && dataStateToDestinyConfigMapper(configDataState)) ?? null;
+  }, [configDataState]);
 
   const validDestinyBoard = useMemo(() => {
     try {
@@ -44,49 +41,30 @@ export const BuildBoardView = () => {
     }
   }, [destinyConfig]);
 
-  /**
-   * init => try build destiny config from config data
-   */
-  useEffect(() => {
-    setDestinyConfig(dataStateToDestinyConfigMapper(configDataState));
-  }, [configDataState]);
-
   const updateConfig = useCallback(
     (updatedState: ConfigDataStateType) => {
-      if (JSON.stringify(updatedState) !== JSON.stringify(configDataState)) {
-        console.log("configDataState updated", updatedState);
-        setConfigDataState(updatedState);
+      setConfigDataState((prev) => {
+        if (JSON.stringify(updatedState) === JSON.stringify(prev)) {
+          return prev;
+        }
         setRuntimeConfigDataState({});
-      }
+        return updatedState;
+      });
     },
-    [configDataState]
+    []
   );
 
   const updateRuntimeConfigDataState = useCallback(
     (updatedState: RuntimeConfigDataStateType) => {
-      if (
-        JSON.stringify(updatedState) !== JSON.stringify(runtimeConfigDataState)
-      ) {
-        console.log("RuntimeConfigDataStateType updated", updatedState);
-        setRuntimeConfigDataState(updatedState);
-      }
+      setRuntimeConfigDataState((prev) => {
+        if (JSON.stringify(updatedState) === JSON.stringify(prev)) {
+          return prev;
+        }
+        return updatedState;
+      });
     },
-    [runtimeConfigDataState]
+    []
   );
-
-  useEffect(() => {
-    if (configDataState) {
-      const newQuery = dataStateToSearchParamsMapper(
-        configDataState,
-        runtimeConfigDataState
-      ).toString();
-
-      if (location.search !== "?" + newQuery) {
-        console.log("updateConfig->navigate", location.search, newQuery);
-        navigate(`/buildBoard?${newQuery}`);
-      }
-    }
-  }, [configDataState, location.search, navigate, runtimeConfigDataState]);
 
   return (
     <>

@@ -1,8 +1,9 @@
 import { useCallback, useState } from "react";
-import { Button, Card, Segmented, Select } from "antd";
+import { Button, Card } from "antd";
 import { LunarDateInput } from "./LunarDateInput";
 import { SolarDateInput } from "./SolarDateInput";
 import { CalendarType, defaultCalendar, Gender } from "fortel-ziweidoushu";
+import { DateTime } from "luxon";
 import { LineSeparator } from "./LineSeparator";
 import { ConfigDataStateType } from "../../view/buildBoard/stateMapper";
 
@@ -33,224 +34,349 @@ const genderOptions = [
   { label: "女", value: "F" },
 ];
 
+const selectStyle: React.CSSProperties = {
+  height: 32,
+  borderRadius: 6,
+  border: "1px solid #d9d9d9",
+  padding: "0 8px",
+};
+
 export const DestinyConfigInputPanel = (
   props: ConfigDataStateType & {
     updateConfig: (dataState: ConfigDataStateType) => void;
   }
 ) => {
-  const [calendarType, setCalendarType] = useState<CalendarType>(
-    props.calendarType ?? CalendarType.LUNAR
-  );
+  const clamp = (value: number, min: number, max: number): number =>
+    Math.min(max, Math.max(min, value));
 
-  const [lunarYear, setLunarYear] = useState<number | null>(
-    props.lunarYear ?? 1990
-  );
-  const [lunarMonth, setLunarMonth] = useState<number | null>(
-    props.lunarMonth ?? 1
-  );
-  const [lunarDay, setLunarDay] = useState<number | null>(props.lunarDay ?? 1);
-  const [lunarLeap, setLunarLeap] = useState<boolean>(props.leap ?? false);
+  const getSolarMonthMaxDay = (year: number, month: number): number => {
+    return DateTime.local(year, month, 1).daysInMonth ?? 31;
+  };
 
-  const [solarYear, setSolarYear] = useState<number | null>(
-    props.solarYear ?? 1990
-  );
-  const [solarMonth, setSolarMonth] = useState<number | null>(
-    props.solarMonth ?? 1
-  );
-  const [solarDay, setSolarDay] = useState<number | null>(props.solarDay ?? 1);
+  const getLunarMonthMaxDay = (
+    year: number,
+    month: number,
+    leap: boolean
+  ): { maxDay: number; leap: boolean } => {
+    try {
+      return {
+        maxDay: defaultCalendar.lunarMonthDays(year, month, leap),
+        leap,
+      };
+    } catch (e) {
+      if (leap) {
+        try {
+          return {
+            maxDay: defaultCalendar.lunarMonthDays(year, month, false),
+            leap: false,
+          };
+        } catch (fallbackError) {
+          console.debug("lunar month days error", e, fallbackError);
+        }
+      } else {
+        console.debug("lunar month days error", e);
+      }
+    }
+    return { maxDay: 30, leap: false };
+  };
 
-  const [bornTime, setBornTime] = useState<number | null>(
-    props.bornTime ?? null
-  );
+  const normalizeDataState = (state: ConfigDataStateType): ConfigDataStateType => {
+    if (state.calendarType === CalendarType.LUNAR) {
+      const lunarYear = state.lunarYear ?? 1990;
+      const lunarMonth = clamp(state.lunarMonth ?? 1, 1, 12);
+      const monthInfo = getLunarMonthMaxDay(lunarYear, lunarMonth, state.leap);
+      const lunarDay = clamp(state.lunarDay ?? 1, 1, monthInfo.maxDay);
+      return {
+        ...state,
+        lunarYear,
+        lunarMonth,
+        lunarDay,
+        leap: monthInfo.leap,
+      };
+    }
+    const solarYear = state.solarYear ?? 1990;
+    const solarMonth = clamp(state.solarMonth ?? 1, 1, 12);
+    const solarDay = clamp(
+      state.solarDay ?? 1,
+      1,
+      getSolarMonthMaxDay(solarYear, solarMonth)
+    );
+    return {
+      ...state,
+      solarYear,
+      solarMonth,
+      solarDay,
+    };
+  };
 
-  const [configType, setConfigType] = useState<number | null>(
-    props.configType ?? 1
-  );
-  const [gender, setGender] = useState<string | null>(props.gender ?? null);
+  const [dataState, setDataState] = useState<ConfigDataStateType>({
+    calendarType: props.calendarType ?? CalendarType.LUNAR,
+    lunarYear: props.lunarYear ?? 1990,
+    lunarMonth: props.lunarMonth ?? 1,
+    lunarDay: props.lunarDay ?? 1,
+    leap: props.leap ?? false,
+    solarYear: props.solarYear ?? 1990,
+    solarMonth: props.solarMonth ?? 1,
+    solarDay: props.solarDay ?? 1,
+    bornTime: props.bornTime ?? null,
+    configType: props.configType ?? 1,
+    gender: props.gender ?? null,
+  });
 
   const onChangeCalendarType = useCallback(
     (value: string | number) => {
-      if (calendarType === CalendarType.LUNAR && value === CalendarType.SOLAR) {
-        if (lunarYear && lunarMonth && lunarDay) {
+      setDataState((prev) => {
+        const normalizedPrev = normalizeDataState(prev);
+        if (
+          normalizedPrev.calendarType === CalendarType.LUNAR &&
+          value === CalendarType.SOLAR &&
+          normalizedPrev.lunarYear &&
+          normalizedPrev.lunarMonth &&
+          normalizedPrev.lunarDay
+        ) {
           try {
             const solarDate = defaultCalendar.lunar2solar(
-              lunarYear,
-              lunarMonth,
-              lunarDay,
-              lunarLeap
+              normalizedPrev.lunarYear,
+              normalizedPrev.lunarMonth,
+              normalizedPrev.lunarDay,
+              normalizedPrev.leap
             );
             if (solarDate) {
-              setSolarYear(solarDate.solarYear);
-              setSolarMonth(solarDate.solarMonth);
-              setSolarDay(solarDate.solarDay);
+              return {
+                ...normalizedPrev,
+                calendarType: CalendarType.SOLAR,
+                solarYear: solarDate.solarYear,
+                solarMonth: solarDate.solarMonth,
+                solarDay: solarDate.solarDay,
+              };
             }
           } catch (e) {
             console.debug("convert date error", e);
           }
-          setCalendarType(CalendarType.SOLAR);
+          return {
+            ...normalizedPrev,
+            calendarType: CalendarType.SOLAR,
+          };
         }
-      } else if (
-        calendarType === CalendarType.SOLAR &&
-        value === CalendarType.LUNAR
-      ) {
-        try {
-          if (solarYear && solarMonth && solarDay) {
+
+        if (
+          normalizedPrev.calendarType === CalendarType.SOLAR &&
+          value === CalendarType.LUNAR &&
+          normalizedPrev.solarYear &&
+          normalizedPrev.solarMonth &&
+          normalizedPrev.solarDay
+        ) {
+          try {
             const lunarDate = defaultCalendar.solar2lunar(
-              solarYear,
-              solarMonth,
-              solarDay
+              normalizedPrev.solarYear,
+              normalizedPrev.solarMonth,
+              normalizedPrev.solarDay
             );
             if (lunarDate) {
-              setLunarYear(lunarDate.lunarYear);
-              setLunarMonth(lunarDate.lunarMonth);
-              setLunarDay(lunarDate.lunarDay);
-              setLunarLeap(lunarDate.isLeapMonth);
+              return {
+                ...normalizedPrev,
+                calendarType: CalendarType.LUNAR,
+                lunarYear: lunarDate.lunarYear,
+                lunarMonth: lunarDate.lunarMonth,
+                lunarDay: lunarDate.lunarDay,
+                leap: lunarDate.isLeapMonth,
+              };
             }
+          } catch (e) {
+            console.debug("convert date error", e);
           }
-        } catch (e) {
-          console.debug("convert date error", e);
+          return {
+            ...normalizedPrev,
+            calendarType: CalendarType.LUNAR,
+          };
         }
-        setCalendarType(CalendarType.LUNAR);
-      }
+
+        return normalizedPrev;
+      });
     },
-    [
-      calendarType,
-      lunarDay,
-      lunarLeap,
-      lunarMonth,
-      lunarYear,
-      solarDay,
-      solarMonth,
-      solarYear,
-    ]
+    []
   );
 
   const build = useCallback(() => {
-    if (calendarType === CalendarType.SOLAR) {
+    const normalizedState = normalizeDataState(dataState);
+    if (normalizedState.calendarType === CalendarType.SOLAR) {
       if (
-        solarYear &&
-        solarMonth &&
-        solarDay &&
-        typeof bornTime === "number" &&
-        typeof configType === "number" &&
-        gender
+        normalizedState.solarYear &&
+        normalizedState.solarMonth &&
+        normalizedState.solarDay &&
+        typeof normalizedState.bornTime === "number" &&
+        typeof normalizedState.configType === "number" &&
+        normalizedState.gender
       ) {
         props.updateConfig({
           calendarType: CalendarType.SOLAR,
-          solarYear: solarYear,
-          solarMonth: solarMonth,
-          solarDay: solarDay,
+          solarYear: normalizedState.solarYear,
+          solarMonth: normalizedState.solarMonth,
+          solarDay: normalizedState.solarDay,
           lunarYear: null,
           lunarMonth: null,
           lunarDay: null,
           leap: false,
-          bornTime,
-          configType,
-          gender: gender === "F" ? Gender.F : Gender.M,
+          bornTime: normalizedState.bornTime,
+          configType: normalizedState.configType,
+          gender: normalizedState.gender === "F" ? Gender.F : Gender.M,
         });
       }
-    } else if (calendarType === CalendarType.LUNAR) {
+    } else if (normalizedState.calendarType === CalendarType.LUNAR) {
       if (
-        lunarYear &&
-        lunarMonth &&
-        lunarDay &&
-        typeof bornTime === "number" &&
-        typeof configType === "number" &&
-        gender
+        normalizedState.lunarYear &&
+        normalizedState.lunarMonth &&
+        normalizedState.lunarDay &&
+        typeof normalizedState.bornTime === "number" &&
+        typeof normalizedState.configType === "number" &&
+        normalizedState.gender
       ) {
         props.updateConfig({
           calendarType: CalendarType.LUNAR,
-          lunarYear: lunarYear,
-          lunarMonth: lunarMonth,
-          lunarDay: lunarDay,
-          leap: lunarLeap,
+          lunarYear: normalizedState.lunarYear,
+          lunarMonth: normalizedState.lunarMonth,
+          lunarDay: normalizedState.lunarDay,
+          leap: normalizedState.leap,
           solarYear: null,
           solarMonth: null,
           solarDay: null,
-          bornTime,
-          configType,
-          gender: gender === "F" ? Gender.F : Gender.M,
+          bornTime: normalizedState.bornTime,
+          configType: normalizedState.configType,
+          gender: normalizedState.gender === "F" ? Gender.F : Gender.M,
         });
       }
     }
   }, [
-    bornTime,
-    calendarType,
-    configType,
-    gender,
-    lunarDay,
-    lunarLeap,
-    lunarMonth,
-    lunarYear,
-    props,
-    solarDay,
-    solarMonth,
-    solarYear,
+    dataState,
+    props.updateConfig,
   ]);
 
   return (
     <Card title="命盤設定" style={{ width: 600 }}>
       {"性別: "}
       <div className="inline-block">
-        <Select
-          placeholder=""
-          onChange={setGender}
-          options={genderOptions}
-          defaultValue={gender}
-          style={{ width: 60 }}
-        />
+        <select
+          value={dataState.gender ?? ""}
+          onChange={(e) =>
+            setDataState((prev) => ({
+              ...prev,
+              gender: (e.target.value || null) as Gender | null,
+            }))
+          }
+          style={{ ...selectStyle, width: 60 }}
+        >
+          <option value="">請選擇</option>
+          {genderOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
       <LineSeparator />
 
       <div>
-        <Segmented
-          options={[
-            { label: "農曆", value: CalendarType.LUNAR },
-            { label: "西曆", value: CalendarType.SOLAR },
-          ]}
-          defaultValue={calendarType}
-          onChange={onChangeCalendarType}
-        />
+        <div className="inline-block">
+          <label style={{ marginRight: 10 }}>
+            <input
+              type="radio"
+              name="destiny-calendar-type"
+              checked={dataState.calendarType === CalendarType.LUNAR}
+              onChange={() => onChangeCalendarType(CalendarType.LUNAR)}
+            />{" "}
+            農曆
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="destiny-calendar-type"
+              checked={dataState.calendarType === CalendarType.SOLAR}
+              onChange={() => onChangeCalendarType(CalendarType.SOLAR)}
+            />{" "}
+            西曆
+          </label>
+        </div>
         <div
           className="inline-block"
           style={{ paddingLeft: 20, paddingRight: 0 }}
         >
-          <div className={calendarType !== CalendarType.LUNAR ? "hide" : ""}>
+          {dataState.calendarType === CalendarType.LUNAR ? (
             <LunarDateInput
-              year={lunarYear}
-              month={lunarMonth}
-              day={lunarDay}
-              leap={lunarLeap}
-              onChangeYear={setLunarYear}
-              onChangeMonth={setLunarMonth}
-              onChangeDay={setLunarDay}
-              onChangeLeap={setLunarLeap}
+              year={dataState.lunarYear}
+              month={dataState.lunarMonth}
+              day={dataState.lunarDay}
+              leap={dataState.leap}
+              onChangeYear={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, lunarYear: value })
+                )
+              }
+              onChangeMonth={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, lunarMonth: value })
+                )
+              }
+              onChangeDay={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, lunarDay: value })
+                )
+              }
+              onChangeLeap={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, leap: value })
+                )
+              }
             />
-          </div>
-
-          <div className={calendarType !== CalendarType.SOLAR ? "hide" : ""}>
+          ) : null}
+          {dataState.calendarType === CalendarType.SOLAR ? (
             <SolarDateInput
-              year={solarYear}
-              month={solarMonth}
-              day={solarDay}
-              onChangeYear={setSolarYear}
-              onChangeMonth={setSolarMonth}
-              onChangeDay={setSolarDay}
+              year={dataState.solarYear}
+              month={dataState.solarMonth}
+              day={dataState.solarDay}
+              onChangeYear={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, solarYear: value })
+                )
+              }
+              onChangeMonth={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, solarMonth: value })
+                )
+              }
+              onChangeDay={(value) =>
+                setDataState((prev) =>
+                  normalizeDataState({ ...prev, solarDay: value })
+                )
+              }
             />
-          </div>
+          ) : null}
         </div>
       </div>
       <LineSeparator />
       <div>
         <div className="inline-block">
           {"時辰: "}
-          <Select
-            placeholder="時辰"
-            onChange={setBornTime}
-            options={bornTimeOptions}
-            defaultValue={bornTime}
-            style={{ width: 200 }}
-          />
+          <select
+            value={
+              typeof dataState.bornTime === "number"
+                ? String(dataState.bornTime)
+                : ""
+            }
+            onChange={(e) =>
+              setDataState((prev) => ({
+                ...prev,
+                bornTime: e.target.value === "" ? null : Number(e.target.value),
+              }))
+            }
+            style={{ ...selectStyle, width: 200 }}
+          >
+            <option value="">時辰</option>
+            {bornTimeOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div
@@ -260,13 +386,28 @@ export const DestinyConfigInputPanel = (
 
         {"盤: "}
         <div className="inline-block">
-          <Select
-            placeholder="盤"
-            onChange={setConfigType}
-            options={configTypeOptions}
-            defaultValue={configType}
-            style={{ width: 80 }}
-          />
+          <select
+            value={
+              typeof dataState.configType === "number"
+                ? String(dataState.configType)
+                : ""
+            }
+            onChange={(e) =>
+              setDataState((prev) => ({
+                ...prev,
+                configType:
+                  e.target.value === "" ? null : Number(e.target.value),
+              }))
+            }
+            style={{ ...selectStyle, width: 80 }}
+          >
+            <option value="">盤</option>
+            {configTypeOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div

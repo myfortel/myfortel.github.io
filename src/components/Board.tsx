@@ -66,14 +66,6 @@ function Board({
         leap,
       });
 
-      console.log(
-        "runtimeContext",
-        runtimeContext,
-        destinyBoard.startControl
-          .shift(runtimeContext.yearGround.index)
-          .shift(lunarMonth - 1)
-      );
-
       return runtimeContext;
     } catch (e) {
       console.error(e);
