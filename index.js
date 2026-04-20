@@ -12207,11 +12207,6 @@ function Board({
         lunarDay,
         leap
       });
-      console.log(
-        "runtimeContext",
-        runtimeContext2,
-        destinyBoard.startControl.shift(runtimeContext2.yearGround.index).shift(lunarMonth - 1)
-      );
       return runtimeContext2;
     } catch (e) {
       console.error(e);
@@ -20238,7 +20233,7 @@ var CloseCircleFilled = function CloseCircleFilled2(props, ref) {
     icon: CloseCircleFilled$1
   }));
 };
-var RefIcon$n = /* @__PURE__ */ reactExports.forwardRef(CloseCircleFilled);
+var RefIcon$l = /* @__PURE__ */ reactExports.forwardRef(CloseCircleFilled);
 
 // This icon file is generated automatically.
 var CloseOutlined$1 = { "icon": { "tag": "svg", "attrs": { "fill-rule": "evenodd", "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z" } }] }, "name": "close", "theme": "outlined" };
@@ -20249,7 +20244,7 @@ var CloseOutlined = function CloseOutlined2(props, ref) {
     icon: CloseOutlined$1
   }));
 };
-var RefIcon$m = /* @__PURE__ */ reactExports.forwardRef(CloseOutlined);
+var RefIcon$k = /* @__PURE__ */ reactExports.forwardRef(CloseOutlined);
 
 var attributes = "accept acceptCharset accessKey action allowFullScreen allowTransparency\n    alt async autoComplete autoFocus autoPlay capture cellPadding cellSpacing challenge\n    charSet checked classID className colSpan cols content contentEditable contextMenu\n    controls coords crossOrigin data dateTime default defer dir disabled download draggable\n    encType form formAction formEncType formMethod formNoValidate formTarget frameBorder\n    headers height hidden high href hrefLang htmlFor httpEquiv icon id inputMode integrity\n    is keyParams keyType kind label lang list loop low manifest marginHeight marginWidth max maxLength media\n    mediaGroup method min minLength multiple muted name noValidate nonce open\n    optimum pattern placeholder poster preload radioGroup readOnly rel required\n    reversed role rowSpan rows sandbox scope scoped scrolling seamless selected\n    shape size sizes span spellCheck src srcDoc srcLang srcSet start step style\n    summary tabIndex target title type useMap value width wmode wrap";
 var eventsName = "onCopy onCut onPaste onCompositionEnd onCompositionStart onCompositionUpdate onKeyDown\n    onKeyPress onKeyUp onFocus onBlur onChange onInput onSubmit onClick onContextMenu onDoubleClick\n    onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown\n    onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp onSelect onTouchCancel\n    onTouchEnd onTouchMove onTouchStart onScroll onWheel onAbort onCanPlay onCanPlayThrough\n    onDurationChange onEmptied onEncrypted onEnded onError onLoadedData onLoadedMetadata\n    onLoadStart onPause onPlay onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend onTimeUpdate onVolumeChange onWaiting onLoad onError";
@@ -20572,7 +20567,7 @@ var LoadingOutlined = function LoadingOutlined2(props, ref) {
     icon: LoadingOutlined$1
   }));
 };
-var RefIcon$l = /* @__PURE__ */ reactExports.forwardRef(LoadingOutlined);
+var RefIcon$j = /* @__PURE__ */ reactExports.forwardRef(LoadingOutlined);
 
 const zIndexContext = /* @__PURE__ */ React.createContext(void 0);
 
@@ -21670,7 +21665,7 @@ const InnerLoadingIcon = /*#__PURE__*/reactExports.forwardRef((props, ref) => {
     className: mergedIconCls,
     style: style,
     ref: ref
-  }, /*#__PURE__*/React.createElement(RefIcon$l, {
+  }, /*#__PURE__*/React.createElement(RefIcon$j, {
     className: iconClassName
   }));
 });
@@ -21980,7 +21975,7 @@ var RightOutlined = function RightOutlined2(props, ref) {
     icon: RightOutlined$1
   }));
 };
-var RefIcon$k = /* @__PURE__ */ reactExports.forwardRef(RightOutlined);
+var RefIcon$i = /* @__PURE__ */ reactExports.forwardRef(RightOutlined);
 
 const genCollapseMotion = token => ({
   [token.componentCls]: {
@@ -34616,7 +34611,7 @@ var CheckOutlined = function CheckOutlined2(props, ref) {
     icon: CheckOutlined$1
   }));
 };
-var RefIcon$j = /* @__PURE__ */ reactExports.forwardRef(CheckOutlined);
+var RefIcon$h = /* @__PURE__ */ reactExports.forwardRef(CheckOutlined);
 
 // This icon file is generated automatically.
 var DownOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z" } }] }, "name": "down", "theme": "outlined" };
@@ -34627,7 +34622,7 @@ var DownOutlined = function DownOutlined2(props, ref) {
     icon: DownOutlined$1
   }));
 };
-var RefIcon$i = /* @__PURE__ */ reactExports.forwardRef(DownOutlined);
+var RefIcon$g = /* @__PURE__ */ reactExports.forwardRef(DownOutlined);
 
 // This icon file is generated automatically.
 var SearchOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z" } }] }, "name": "search", "theme": "outlined" };
@@ -34638,7 +34633,7 @@ var SearchOutlined = function SearchOutlined2(props, ref) {
     icon: SearchOutlined$1
   }));
 };
-var RefIcon$h = /* @__PURE__ */ reactExports.forwardRef(SearchOutlined);
+var RefIcon$f = /* @__PURE__ */ reactExports.forwardRef(SearchOutlined);
 
 function useIcons(_ref) {
   let {
@@ -34655,7 +34650,7 @@ function useIcons(_ref) {
     showArrow,
     componentName
   } = _ref;
-  const mergedClearIcon = clearIcon !== null && clearIcon !== void 0 ? clearIcon : /* @__PURE__ */ reactExports.createElement(RefIcon$n, null);
+  const mergedClearIcon = clearIcon !== null && clearIcon !== void 0 ? clearIcon : /* @__PURE__ */ reactExports.createElement(RefIcon$l, null);
   const getSuffixIconNode = (arrowIcon) => {
     if (suffixIcon === null && !hasFeedback && !showArrow) {
       return null;
@@ -34666,7 +34661,7 @@ function useIcons(_ref) {
   if (suffixIcon !== void 0) {
     mergedSuffixIcon = getSuffixIconNode(suffixIcon);
   } else if (loading) {
-    mergedSuffixIcon = getSuffixIconNode(/* @__PURE__ */ reactExports.createElement(RefIcon$l, {
+    mergedSuffixIcon = getSuffixIconNode(/* @__PURE__ */ reactExports.createElement(RefIcon$j, {
       spin: true
     }));
   } else {
@@ -34677,11 +34672,11 @@ function useIcons(_ref) {
         showSearch
       } = _ref2;
       if (open && showSearch) {
-        return getSuffixIconNode(/* @__PURE__ */ reactExports.createElement(RefIcon$h, {
+        return getSuffixIconNode(/* @__PURE__ */ reactExports.createElement(RefIcon$f, {
           className: iconCls
         }));
       }
-      return getSuffixIconNode(/* @__PURE__ */ reactExports.createElement(RefIcon$i, {
+      return getSuffixIconNode(/* @__PURE__ */ reactExports.createElement(RefIcon$g, {
         className: iconCls
       }));
     };
@@ -34690,7 +34685,7 @@ function useIcons(_ref) {
   if (menuItemSelectedIcon !== void 0) {
     mergedItemIcon = menuItemSelectedIcon;
   } else if (multiple) {
-    mergedItemIcon = /* @__PURE__ */ reactExports.createElement(RefIcon$j, null);
+    mergedItemIcon = /* @__PURE__ */ reactExports.createElement(RefIcon$h, null);
   } else {
     mergedItemIcon = null;
   }
@@ -34698,7 +34693,7 @@ function useIcons(_ref) {
   if (removeIcon !== void 0) {
     mergedRemoveIcon = removeIcon;
   } else {
-    mergedRemoveIcon = /* @__PURE__ */ reactExports.createElement(RefIcon$m, null);
+    mergedRemoveIcon = /* @__PURE__ */ reactExports.createElement(RefIcon$k, null);
   }
   return {
     clearIcon: mergedClearIcon,
@@ -35972,7 +35967,7 @@ var LeftOutlined = function LeftOutlined2(props, ref) {
     icon: LeftOutlined$1
   }));
 };
-var RefIcon$g = /* @__PURE__ */ reactExports.forwardRef(LeftOutlined);
+var RefIcon$e = /* @__PURE__ */ reactExports.forwardRef(LeftOutlined);
 
 var ESC$1 = KeyCode.ESC,
   TAB = KeyCode.TAB;
@@ -37794,7 +37789,7 @@ var EllipsisOutlined = function EllipsisOutlined2(props, ref) {
     icon: EllipsisOutlined$1
   }));
 };
-var RefIcon$f = /* @__PURE__ */ reactExports.forwardRef(EllipsisOutlined);
+var RefIcon$d = /* @__PURE__ */ reactExports.forwardRef(EllipsisOutlined);
 
 const MenuContext = /*#__PURE__*/reactExports.createContext({
   prefixCls: '',
@@ -39098,7 +39093,7 @@ const InternalMenu = /* @__PURE__ */ reactExports.forwardRef((props, ref) => {
     value: contextValue
   }, /* @__PURE__ */ reactExports.createElement(ExportMenu, Object.assign({
     getPopupContainer,
-    overflowedIndicator: /* @__PURE__ */ reactExports.createElement(RefIcon$f, null),
+    overflowedIndicator: /* @__PURE__ */ reactExports.createElement(RefIcon$d, null),
     overflowedIndicatorPopupClassName: classNames(prefixCls, `${prefixCls}-${theme}`, overflowedIndicatorPopupClassName),
     mode: mergedMode,
     selectable: mergedSelectable,
@@ -39563,9 +39558,9 @@ const Dropdown$1 = (props) => {
       rootClassName: classNames(cssVarCls, rootCls),
       expandIcon: /* @__PURE__ */ reactExports.createElement("span", {
         className: `${prefixCls}-menu-submenu-arrow`
-      }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$g, {
+      }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$e, {
         className: `${prefixCls}-menu-submenu-arrow-icon`
-      }) : /* @__PURE__ */ reactExports.createElement(RefIcon$k, {
+      }) : /* @__PURE__ */ reactExports.createElement(RefIcon$i, {
         className: `${prefixCls}-menu-submenu-arrow-icon`
       })),
       mode: "vertical",
@@ -41421,7 +41416,7 @@ var PlusOutlined = function PlusOutlined2(props, ref) {
     icon: PlusOutlined$1
   }));
 };
-var RefIcon$e = /* @__PURE__ */ reactExports.forwardRef(PlusOutlined);
+var RefIcon$c = /* @__PURE__ */ reactExports.forwardRef(PlusOutlined);
 
 const TabContext = /*#__PURE__*/reactExports.createContext(null);
 
@@ -43949,8 +43944,8 @@ const Tabs = (props) => {
         } = _ref;
         onEdit === null || onEdit === void 0 ? void 0 : onEdit(editType === "add" ? event : key, editType);
       },
-      removeIcon: (_a = removeIcon !== null && removeIcon !== void 0 ? removeIcon : tabs === null || tabs === void 0 ? void 0 : tabs.removeIcon) !== null && _a !== void 0 ? _a : /* @__PURE__ */ reactExports.createElement(RefIcon$m, null),
-      addIcon: (addIcon !== null && addIcon !== void 0 ? addIcon : tabs === null || tabs === void 0 ? void 0 : tabs.addIcon) || /* @__PURE__ */ reactExports.createElement(RefIcon$e, null),
+      removeIcon: (_a = removeIcon !== null && removeIcon !== void 0 ? removeIcon : tabs === null || tabs === void 0 ? void 0 : tabs.removeIcon) !== null && _a !== void 0 ? _a : /* @__PURE__ */ reactExports.createElement(RefIcon$k, null),
+      addIcon: (addIcon !== null && addIcon !== void 0 ? addIcon : tabs === null || tabs === void 0 ? void 0 : tabs.addIcon) || /* @__PURE__ */ reactExports.createElement(RefIcon$c, null),
       showAdd: hideAdd !== true
     };
   }
@@ -43978,7 +43973,7 @@ const Tabs = (props) => {
     style: mergedStyle,
     editable,
     more: Object.assign({
-      icon: (_l = (_k = (_j = (_h = tabs === null || tabs === void 0 ? void 0 : tabs.more) === null || _h === void 0 ? void 0 : _h.icon) !== null && _j !== void 0 ? _j : tabs === null || tabs === void 0 ? void 0 : tabs.moreIcon) !== null && _k !== void 0 ? _k : moreIcon) !== null && _l !== void 0 ? _l : /* @__PURE__ */ reactExports.createElement(RefIcon$f, null),
+      icon: (_l = (_k = (_j = (_h = tabs === null || tabs === void 0 ? void 0 : tabs.more) === null || _h === void 0 ? void 0 : _h.icon) !== null && _j !== void 0 ? _j : tabs === null || tabs === void 0 ? void 0 : tabs.moreIcon) !== null && _k !== void 0 ? _k : moreIcon) !== null && _l !== void 0 ? _l : /* @__PURE__ */ reactExports.createElement(RefIcon$d, null),
       transitionName: `${rootPrefixCls}-slide-up`
     }, more),
     prefixCls,
@@ -46762,7 +46757,7 @@ const getAllowClear = allowClear => {
     mergedAllowClear = allowClear;
   } else if (allowClear) {
     mergedAllowClear = {
-      clearIcon: /*#__PURE__*/React.createElement(RefIcon$n, null)
+      clearIcon: /*#__PURE__*/React.createElement(RefIcon$l, null)
     };
   }
   return mergedAllowClear;
@@ -48906,7 +48901,7 @@ const DropdownButton = props => {
       placement,
       getPopupContainer,
       href,
-      icon = /*#__PURE__*/reactExports.createElement(RefIcon$f, null),
+      icon = /*#__PURE__*/reactExports.createElement(RefIcon$d, null),
       title,
       buttonsRender = buttons => buttons,
       mouseEnterDelay,
@@ -49020,7 +49015,7 @@ var DoubleLeftOutlined = function DoubleLeftOutlined2(props, ref) {
     icon: DoubleLeftOutlined$1
   }));
 };
-var RefIcon$d = /* @__PURE__ */ reactExports.forwardRef(DoubleLeftOutlined);
+var RefIcon$b = /* @__PURE__ */ reactExports.forwardRef(DoubleLeftOutlined);
 
 // This icon file is generated automatically.
 var DoubleRightOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M533.2 492.3L277.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H188c-6.7 0-10.4 7.7-6.3 12.9L447.1 512 181.7 851.1A7.98 7.98 0 00188 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5zm304 0L581.9 166.1c-3-3.9-7.7-6.1-12.6-6.1H492c-6.7 0-10.4 7.7-6.3 12.9L751.1 512 485.7 851.1A7.98 7.98 0 00492 864h77.3c4.9 0 9.6-2.3 12.6-6.1l255.3-326.1c9.1-11.7 9.1-27.9 0-39.5z" } }] }, "name": "double-right", "theme": "outlined" };
@@ -49031,7 +49026,7 @@ var DoubleRightOutlined = function DoubleRightOutlined2(props, ref) {
     icon: DoubleRightOutlined$1
   }));
 };
-var RefIcon$c = /* @__PURE__ */ reactExports.forwardRef(DoubleRightOutlined);
+var RefIcon$a = /* @__PURE__ */ reactExports.forwardRef(DoubleRightOutlined);
 
 var locale = {
   // Options
@@ -50227,21 +50222,21 @@ const Pagination = (props) => {
       className: `${prefixCls}-item-link`,
       type: "button",
       tabIndex: -1
-    }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$k, null) : /* @__PURE__ */ reactExports.createElement(RefIcon$g, null));
+    }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$i, null) : /* @__PURE__ */ reactExports.createElement(RefIcon$e, null));
     const nextIcon = /* @__PURE__ */ reactExports.createElement("button", {
       className: `${prefixCls}-item-link`,
       type: "button",
       tabIndex: -1
-    }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$g, null) : /* @__PURE__ */ reactExports.createElement(RefIcon$k, null));
+    }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$e, null) : /* @__PURE__ */ reactExports.createElement(RefIcon$i, null));
     const jumpPrevIcon = (
       // biome-ignore lint/a11y/useValidAnchor: it is hard to refactor
       /* @__PURE__ */ reactExports.createElement("a", {
         className: `${prefixCls}-item-link`
       }, /* @__PURE__ */ reactExports.createElement("div", {
         className: `${prefixCls}-item-container`
-      }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$c, {
+      }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$a, {
         className: `${prefixCls}-item-link-icon`
-      }) : /* @__PURE__ */ reactExports.createElement(RefIcon$d, {
+      }) : /* @__PURE__ */ reactExports.createElement(RefIcon$b, {
         className: `${prefixCls}-item-link-icon`
       }), ellipsis))
     );
@@ -50251,9 +50246,9 @@ const Pagination = (props) => {
         className: `${prefixCls}-item-link`
       }, /* @__PURE__ */ reactExports.createElement("div", {
         className: `${prefixCls}-item-container`
-      }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$d, {
+      }, direction === "rtl" ? /* @__PURE__ */ reactExports.createElement(RefIcon$b, {
         className: `${prefixCls}-item-link-icon`
-      }) : /* @__PURE__ */ reactExports.createElement(RefIcon$c, {
+      }) : /* @__PURE__ */ reactExports.createElement(RefIcon$a, {
         className: `${prefixCls}-item-link-icon`
       }), ellipsis))
     );
@@ -50801,17 +50796,6 @@ Spin.setDefaultIndicator = (indicator) => {
 };
 
 // This icon file is generated automatically.
-var AppstoreOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M464 144H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H212V212h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H612V212h200v200zM464 544H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H212V612h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H612V612h200v200z" } }] }, "name": "appstore", "theme": "outlined" };
-
-var AppstoreOutlined = function AppstoreOutlined2(props, ref) {
-  return /* @__PURE__ */ reactExports.createElement(Icon$1, _extends({}, props, {
-    ref,
-    icon: AppstoreOutlined$1
-  }));
-};
-var RefIcon$b = /* @__PURE__ */ reactExports.forwardRef(AppstoreOutlined);
-
-// This icon file is generated automatically.
 var CaretDownFilled$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "0 0 1024 1024", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z" } }] }, "name": "caret-down", "theme": "filled" };
 
 var CaretDownFilled = function CaretDownFilled2(props, ref) {
@@ -50820,7 +50804,7 @@ var CaretDownFilled = function CaretDownFilled2(props, ref) {
     icon: CaretDownFilled$1
   }));
 };
-var RefIcon$a = /* @__PURE__ */ reactExports.forwardRef(CaretDownFilled);
+var RefIcon$9 = /* @__PURE__ */ reactExports.forwardRef(CaretDownFilled);
 
 // This icon file is generated automatically.
 var CaretDownOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "0 0 1024 1024", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M840.4 300H183.6c-19.7 0-30.7 20.8-18.5 35l328.4 380.8c9.4 10.9 27.5 10.9 37 0L858.9 335c12.2-14.2 1.2-35-18.5-35z" } }] }, "name": "caret-down", "theme": "outlined" };
@@ -50831,7 +50815,7 @@ var CaretDownOutlined = function CaretDownOutlined2(props, ref) {
     icon: CaretDownOutlined$1
   }));
 };
-var RefIcon$9 = /* @__PURE__ */ reactExports.forwardRef(CaretDownOutlined);
+var RefIcon$8 = /* @__PURE__ */ reactExports.forwardRef(CaretDownOutlined);
 
 // This icon file is generated automatically.
 var CaretUpOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "0 0 1024 1024", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M858.9 689L530.5 308.2c-9.4-10.9-27.5-10.9-37 0L165.1 689c-12.2 14.2-1.2 35 18.5 35h656.8c19.7 0 30.7-20.8 18.5-35z" } }] }, "name": "caret-up", "theme": "outlined" };
@@ -50842,7 +50826,7 @@ var CaretUpOutlined = function CaretUpOutlined2(props, ref) {
     icon: CaretUpOutlined$1
   }));
 };
-var RefIcon$8 = /* @__PURE__ */ reactExports.forwardRef(CaretUpOutlined);
+var RefIcon$7 = /* @__PURE__ */ reactExports.forwardRef(CaretUpOutlined);
 
 // This icon file is generated automatically.
 var FileOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0042 42h216v494z" } }] }, "name": "file", "theme": "outlined" };
@@ -50853,7 +50837,7 @@ var FileOutlined = function FileOutlined2(props, ref) {
     icon: FileOutlined$1
   }));
 };
-var RefIcon$7 = /* @__PURE__ */ reactExports.forwardRef(FileOutlined);
+var RefIcon$6 = /* @__PURE__ */ reactExports.forwardRef(FileOutlined);
 
 // This icon file is generated automatically.
 var FilterFilled$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M349 838c0 17.7 14.2 32 31.8 32h262.4c17.6 0 31.8-14.3 31.8-32V642H349v196zm531.1-684H143.9c-24.5 0-39.8 26.7-27.5 48l221.3 376h348.8l221.3-376c12.1-21.3-3.2-48-27.7-48z" } }] }, "name": "filter", "theme": "filled" };
@@ -50864,7 +50848,7 @@ var FilterFilled = function FilterFilled2(props, ref) {
     icon: FilterFilled$1
   }));
 };
-var RefIcon$6 = /* @__PURE__ */ reactExports.forwardRef(FilterFilled);
+var RefIcon$5 = /* @__PURE__ */ reactExports.forwardRef(FilterFilled);
 
 // This icon file is generated automatically.
 var FolderOpenOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M928 444H820V330.4c0-17.7-14.3-32-32-32H473L355.7 186.2a8.15 8.15 0 00-5.5-2.2H96c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h698c13 0 24.8-7.9 29.7-20l134-332c1.5-3.8 2.3-7.9 2.3-12 0-17.7-14.3-32-32-32zM136 256h188.5l119.6 114.4H748V444H238c-13 0-24.8 7.9-29.7 20L136 643.2V256zm635.3 512H159l103.3-256h612.4L771.3 768z" } }] }, "name": "folder-open", "theme": "outlined" };
@@ -50875,7 +50859,7 @@ var FolderOpenOutlined = function FolderOpenOutlined2(props, ref) {
     icon: FolderOpenOutlined$1
   }));
 };
-var RefIcon$5 = /* @__PURE__ */ reactExports.forwardRef(FolderOpenOutlined);
+var RefIcon$4 = /* @__PURE__ */ reactExports.forwardRef(FolderOpenOutlined);
 
 // This icon file is generated automatically.
 var FolderOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M880 298.4H521L403.7 186.2a8.15 8.15 0 00-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z" } }] }, "name": "folder", "theme": "outlined" };
@@ -50886,7 +50870,7 @@ var FolderOutlined = function FolderOutlined2(props, ref) {
     icon: FolderOutlined$1
   }));
 };
-var RefIcon$4 = /* @__PURE__ */ reactExports.forwardRef(FolderOutlined);
+var RefIcon$3 = /* @__PURE__ */ reactExports.forwardRef(FolderOutlined);
 
 // This icon file is generated automatically.
 var HolderOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M300 276.5a56 56 0 1056-97 56 56 0 00-56 97zm0 284a56 56 0 1056-97 56 56 0 00-56 97zM640 228a56 56 0 10112 0 56 56 0 00-112 0zm0 284a56 56 0 10112 0 56 56 0 00-112 0zM300 844.5a56 56 0 1056-97 56 56 0 00-56 97zM640 796a56 56 0 10112 0 56 56 0 00-112 0z" } }] }, "name": "holder", "theme": "outlined" };
@@ -50897,7 +50881,7 @@ var HolderOutlined = function HolderOutlined2(props, ref) {
     icon: HolderOutlined$1
   }));
 };
-var RefIcon$3 = /* @__PURE__ */ reactExports.forwardRef(HolderOutlined);
+var RefIcon$2 = /* @__PURE__ */ reactExports.forwardRef(HolderOutlined);
 
 // This icon file is generated automatically.
 var MinusSquareOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M328 544h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8z" } }, { "tag": "path", "attrs": { "d": "M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z" } }] }, "name": "minus-square", "theme": "outlined" };
@@ -50908,7 +50892,7 @@ var MinusSquareOutlined = function MinusSquareOutlined2(props, ref) {
     icon: MinusSquareOutlined$1
   }));
 };
-var RefIcon$2 = /* @__PURE__ */ reactExports.forwardRef(MinusSquareOutlined);
+var RefIcon$1 = /* @__PURE__ */ reactExports.forwardRef(MinusSquareOutlined);
 
 // This icon file is generated automatically.
 var PlusSquareOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M328 544h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8z" } }, { "tag": "path", "attrs": { "d": "M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z" } }] }, "name": "plus-square", "theme": "outlined" };
@@ -50919,18 +50903,7 @@ var PlusSquareOutlined = function PlusSquareOutlined2(props, ref) {
     icon: PlusSquareOutlined$1
   }));
 };
-var RefIcon$1 = /* @__PURE__ */ reactExports.forwardRef(PlusSquareOutlined);
-
-// This icon file is generated automatically.
-var SettingOutlined$1 = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M924.8 625.7l-65.5-56c3.1-19 4.7-38.4 4.7-57.8s-1.6-38.8-4.7-57.8l65.5-56a32.03 32.03 0 009.3-35.2l-.9-2.6a443.74 443.74 0 00-79.7-137.9l-1.8-2.1a32.12 32.12 0 00-35.1-9.5l-81.3 28.9c-30-24.6-63.5-44-99.7-57.6l-15.7-85a32.05 32.05 0 00-25.8-25.7l-2.7-.5c-52.1-9.4-106.9-9.4-159 0l-2.7.5a32.05 32.05 0 00-25.8 25.7l-15.8 85.4a351.86 351.86 0 00-99 57.4l-81.9-29.1a32 32 0 00-35.1 9.5l-1.8 2.1a446.02 446.02 0 00-79.7 137.9l-.9 2.6c-4.5 12.5-.8 26.5 9.3 35.2l66.3 56.6c-3.1 18.8-4.6 38-4.6 57.1 0 19.2 1.5 38.4 4.6 57.1L99 625.5a32.03 32.03 0 00-9.3 35.2l.9 2.6c18.1 50.4 44.9 96.9 79.7 137.9l1.8 2.1a32.12 32.12 0 0035.1 9.5l81.9-29.1c29.8 24.5 63.1 43.9 99 57.4l15.8 85.4a32.05 32.05 0 0025.8 25.7l2.7.5a449.4 449.4 0 00159 0l2.7-.5a32.05 32.05 0 0025.8-25.7l15.7-85a350 350 0 0099.7-57.6l81.3 28.9a32 32 0 0035.1-9.5l1.8-2.1c34.8-41.1 61.6-87.5 79.7-137.9l.9-2.6c4.5-12.3.8-26.3-9.3-35zM788.3 465.9c2.5 15.1 3.8 30.6 3.8 46.1s-1.3 31-3.8 46.1l-6.6 40.1 74.7 63.9a370.03 370.03 0 01-42.6 73.6L721 702.8l-31.4 25.8c-23.9 19.6-50.5 35-79.3 45.8l-38.1 14.3-17.9 97a377.5 377.5 0 01-85 0l-17.9-97.2-37.8-14.5c-28.5-10.8-55-26.2-78.7-45.7l-31.4-25.9-93.4 33.2c-17-22.9-31.2-47.6-42.6-73.6l75.5-64.5-6.5-40c-2.4-14.9-3.7-30.3-3.7-45.5 0-15.3 1.2-30.6 3.7-45.5l6.5-40-75.5-64.5c11.3-26.1 25.6-50.7 42.6-73.6l93.4 33.2 31.4-25.9c23.7-19.5 50.2-34.9 78.7-45.7l37.9-14.3 17.9-97.2c28.1-3.2 56.8-3.2 85 0l17.9 97 38.1 14.3c28.7 10.8 55.4 26.2 79.3 45.8l31.4 25.8 92.8-32.9c17 22.9 31.2 47.6 42.6 73.6L781.8 426l6.5 39.9zM512 326c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm79.2 255.2A111.6 111.6 0 01512 614c-29.9 0-58-11.7-79.2-32.8A111.6 111.6 0 01400 502c0-29.9 11.7-58 32.8-79.2C454 401.6 482.1 390 512 390c29.9 0 58 11.6 79.2 32.8A111.6 111.6 0 01624 502c0 29.9-11.7 58-32.8 79.2z" } }] }, "name": "setting", "theme": "outlined" };
-
-var SettingOutlined = function SettingOutlined2(props, ref) {
-  return /* @__PURE__ */ reactExports.createElement(Icon$1, _extends({}, props, {
-    ref,
-    icon: SettingOutlined$1
-  }));
-};
-var RefIcon = /* @__PURE__ */ reactExports.forwardRef(SettingOutlined);
+var RefIcon = /* @__PURE__ */ reactExports.forwardRef(PlusSquareOutlined);
 
 var EXPAND_COLUMN = {};
 var INTERNAL_HOOKS = 'rc-table-internal-hook';
@@ -54463,7 +54436,7 @@ const useSelection = (config, rowSelection) => {
         }, /* @__PURE__ */ reactExports.createElement(Dropdown, {
           menu,
           getPopupContainer
-        }, /* @__PURE__ */ reactExports.createElement("span", null, /* @__PURE__ */ reactExports.createElement(RefIcon$i, null))));
+        }, /* @__PURE__ */ reactExports.createElement("span", null, /* @__PURE__ */ reactExports.createElement(RefIcon$g, null))));
       }
       const allDisabledData = flattedData.map((record, index) => {
         const key = getRowKey(record, index);
@@ -56550,7 +56523,7 @@ const SwitcherIconCom = props => {
     if (/*#__PURE__*/reactExports.isValidElement(switcherLoadingIcon)) {
       return switcherLoadingIcon;
     }
-    return /*#__PURE__*/reactExports.createElement(RefIcon$l, {
+    return /*#__PURE__*/reactExports.createElement(RefIcon$j, {
       className: `${prefixCls}-switcher-loading-icon`
     });
   }
@@ -56572,7 +56545,7 @@ const SwitcherIconCom = props => {
       }
       return leafIcon;
     }
-    return showLeafIcon ? (/*#__PURE__*/reactExports.createElement(RefIcon$7, {
+    return showLeafIcon ? (/*#__PURE__*/reactExports.createElement(RefIcon$6, {
       className: `${prefixCls}-switcher-line-icon`
     })) : (/*#__PURE__*/reactExports.createElement("span", {
       className: `${prefixCls}-switcher-leaf-line`
@@ -56589,13 +56562,13 @@ const SwitcherIconCom = props => {
     return switcher;
   }
   if (showLine) {
-    return expanded ? (/*#__PURE__*/reactExports.createElement(RefIcon$2, {
+    return expanded ? (/*#__PURE__*/reactExports.createElement(RefIcon$1, {
       className: `${prefixCls}-switcher-line-icon`
-    })) : (/*#__PURE__*/reactExports.createElement(RefIcon$1, {
+    })) : (/*#__PURE__*/reactExports.createElement(RefIcon, {
       className: `${prefixCls}-switcher-line-icon`
     }));
   }
-  return /*#__PURE__*/reactExports.createElement(RefIcon$a, {
+  return /*#__PURE__*/reactExports.createElement(RefIcon$9, {
     className: switcherCls
   });
 };
@@ -56654,7 +56627,7 @@ const Tree$1 = /* @__PURE__ */ React.forwardRef((props, ref) => {
         break;
     }
     if (mergedDraggable.icon !== false) {
-      mergedDraggable.icon = mergedDraggable.icon || /* @__PURE__ */ React.createElement(RefIcon$3, null);
+      mergedDraggable.icon = mergedDraggable.icon || /* @__PURE__ */ React.createElement(RefIcon$2, null);
     }
     return mergedDraggable;
   }, [draggable]);
@@ -56778,9 +56751,9 @@ function getIcon(props) {
     expanded
   } = props;
   if (isLeaf) {
-    return /* @__PURE__ */ reactExports.createElement(RefIcon$7, null);
+    return /* @__PURE__ */ reactExports.createElement(RefIcon$6, null);
   }
-  return expanded ? /* @__PURE__ */ reactExports.createElement(RefIcon$5, null) : /* @__PURE__ */ reactExports.createElement(RefIcon$4, null);
+  return expanded ? /* @__PURE__ */ reactExports.createElement(RefIcon$4, null) : /* @__PURE__ */ reactExports.createElement(RefIcon$3, null);
 }
 function getTreeData(_ref) {
   let {
@@ -56924,7 +56897,7 @@ const FilterSearch = props => {
   return /*#__PURE__*/reactExports.createElement("div", {
     className: `${tablePrefixCls}-filter-dropdown-search`
   }, /*#__PURE__*/reactExports.createElement(Input, {
-    prefix: /*#__PURE__*/reactExports.createElement(RefIcon$h, null),
+    prefix: /*#__PURE__*/reactExports.createElement(RefIcon$f, null),
     placeholder: locale.filterSearchPlaceholder,
     onChange: onChange,
     value: value,
@@ -57349,7 +57322,7 @@ const FilterDropdown = (props) => {
     } else if (column.filterIcon) {
       filterIcon = column.filterIcon;
     } else {
-      filterIcon = /* @__PURE__ */ reactExports.createElement(RefIcon$6, null);
+      filterIcon = /* @__PURE__ */ reactExports.createElement(RefIcon$5, null);
     }
     return /* @__PURE__ */ reactExports.createElement("span", {
       role: "button",
@@ -57750,12 +57723,12 @@ const injectSorter = (prefixCls, columns, sorterStates, triggerSorter, defaultSo
           sortOrder
         });
       } else {
-        const upNode = sortDirections.includes(ASCEND) && (/*#__PURE__*/reactExports.createElement(RefIcon$8, {
+        const upNode = sortDirections.includes(ASCEND) && (/*#__PURE__*/reactExports.createElement(RefIcon$7, {
           className: classNames(`${prefixCls}-column-sorter-up`, {
             active: sortOrder === ASCEND
           })
         }));
-        const downNode = sortDirections.includes(DESCEND) && (/*#__PURE__*/reactExports.createElement(RefIcon$9, {
+        const downNode = sortDirections.includes(DESCEND) && (/*#__PURE__*/reactExports.createElement(RefIcon$8, {
           className: classNames(`${prefixCls}-column-sorter-down`, {
             active: sortOrder === DESCEND
           })
@@ -59877,6 +59850,12 @@ const monthOptions$1 = arrayRange(1, 12).map((num) => {
 const dayOptions$1 = arrayRange(1, 30).map((num) => {
   return { label: CHINESE_DAYS_OF_MONTH[num - 1], value: num };
 });
+const selectStyle$2 = {
+  height: 32,
+  borderRadius: 6,
+  border: "1px solid #d9d9d9",
+  padding: "0 8px"
+};
 const LunarDateInput = ({
   year,
   month,
@@ -59896,37 +59875,32 @@ const LunarDateInput = ({
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
     " 年: ",
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
+      "select",
       {
-        placeholder: "年份",
-        optionFilterProp: "label",
-        onChange: onChangeYear,
-        options: yearOptions$1,
-        value: year,
-        style: { width: 80 }
+        value: year ?? "",
+        onChange: (e) => onChangeYear(Number(e.target.value)),
+        style: { ...selectStyle$2, width: 80 },
+        children: yearOptions$1.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
       }
     ),
     " 月: ",
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
+      "select",
       {
-        placeholder: "月份",
-        onChange: onChangeMonth,
-        options: monthOptions$1,
-        value: month,
-        style: { width: 80 }
+        value: month ?? "",
+        onChange: (e) => onChangeMonth(Number(e.target.value)),
+        style: { ...selectStyle$2, width: 80 },
+        children: monthOptions$1.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
       }
     ),
     " 日: ",
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
+      "select",
       {
-        placeholder: "日子",
-        onChange: onChangeDay,
-        filterOption: (input, option) => ("" + (option?.value ?? "")).startsWith(input),
-        options: dayOptions$1,
-        value: day,
-        style: { width: 100 }
+        value: day ?? "",
+        onChange: (e) => onChangeDay(Number(e.target.value)),
+        style: { ...selectStyle$2, width: 100 },
+        children: dayOptions$1.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
       }
     ),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -59949,6 +59923,12 @@ const monthOptions = arrayRange(1, 12).map((num) => {
 const dayOptions = arrayRange(1, 31).map((num) => {
   return { label: "" + num, value: num };
 });
+const selectStyle$1 = {
+  height: 32,
+  borderRadius: 6,
+  border: "1px solid #d9d9d9",
+  padding: "0 8px"
+};
 const SolarDateInput = ({
   year,
   month,
@@ -59960,495 +59940,35 @@ const SolarDateInput = ({
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
     " 年: ",
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
+      "select",
       {
-        placeholder: "年份",
-        optionFilterProp: "label",
-        onChange: onChangeYear,
-        options: yearOptions,
-        value: year,
-        style: { width: 80 }
+        value: year ?? "",
+        onChange: (e) => onChangeYear(Number(e.target.value)),
+        style: { ...selectStyle$1, width: 80 },
+        children: yearOptions.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
       }
     ),
     " 月: ",
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
+      "select",
       {
-        placeholder: "月份",
-        onChange: onChangeMonth,
-        options: monthOptions,
-        value: month,
-        style: { width: 80 }
+        value: month ?? "",
+        onChange: (e) => onChangeMonth(Number(e.target.value)),
+        style: { ...selectStyle$1, width: 80 },
+        children: monthOptions.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
       }
     ),
     " 日: ",
     /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
+      "select",
       {
-        placeholder: "日子",
-        optionFilterProp: "label",
-        onChange: onChangeDay,
-        filterOption: (input, option) => ("" + (option?.value ?? "")).startsWith(input),
-        options: dayOptions,
-        value: day,
-        style: { width: 100 }
+        value: day ?? "",
+        onChange: (e) => onChangeDay(Number(e.target.value)),
+        style: { ...selectStyle$1, width: 100 },
+        children: dayOptions.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
       }
     )
   ] }) });
-};
-
-const LineSeparator = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { marginTop: 15 } });
-};
-
-const bornTimeOptions = [
-  { label: "早子 (00:00am-00:59am)", value: 0 },
-  { label: "丑 (01:00am-02:59am)", value: 1 },
-  { label: "寅 (03:00am-04:59am)", value: 2 },
-  { label: "卯 (05:00am-06:59am)", value: 3 },
-  { label: "辰 (07:00am-08:59am)", value: 4 },
-  { label: "巳 (09:00am-10:59am)", value: 5 },
-  { label: "午 (11:00am-12:59pm)", value: 6 },
-  { label: "未 (13:00pm-14:59pm)", value: 7 },
-  { label: "申 (15:00pm-16:59pm)", value: 8 },
-  { label: "酉 (17:00pm-18:59pm)", value: 9 },
-  { label: "戌 (19:00pm-20:59pm)", value: 10 },
-  { label: "亥 (21:00pm-22:59pm)", value: 11 },
-  { label: "夜子 (23:00pm-23:59pm)", value: 12 }
-];
-const configTypeOptions = [
-  { label: "地盤", value: 0 },
-  { label: "天盤", value: 1 },
-  { label: "人盤", value: 2 }
-];
-const genderOptions$1 = [
-  { label: "男", value: "M" },
-  { label: "女", value: "F" }
-];
-const DestinyConfigInputPanel = (props) => {
-  const [calendarType, setCalendarType] = reactExports.useState(
-    props.calendarType ?? mainExports.CalendarType.LUNAR
-  );
-  const [lunarYear, setLunarYear] = reactExports.useState(
-    props.lunarYear ?? 1990
-  );
-  const [lunarMonth, setLunarMonth] = reactExports.useState(
-    props.lunarMonth ?? 1
-  );
-  const [lunarDay, setLunarDay] = reactExports.useState(props.lunarDay ?? 1);
-  const [lunarLeap, setLunarLeap] = reactExports.useState(props.leap ?? false);
-  const [solarYear, setSolarYear] = reactExports.useState(
-    props.solarYear ?? 1990
-  );
-  const [solarMonth, setSolarMonth] = reactExports.useState(
-    props.solarMonth ?? 1
-  );
-  const [solarDay, setSolarDay] = reactExports.useState(props.solarDay ?? 1);
-  const [bornTime, setBornTime] = reactExports.useState(
-    props.bornTime ?? null
-  );
-  const [configType, setConfigType] = reactExports.useState(
-    props.configType ?? 1
-  );
-  const [gender, setGender] = reactExports.useState(props.gender ?? null);
-  const onChangeCalendarType = reactExports.useCallback(
-    (value) => {
-      if (calendarType === mainExports.CalendarType.LUNAR && value === mainExports.CalendarType.SOLAR) {
-        if (lunarYear && lunarMonth && lunarDay) {
-          try {
-            const solarDate = mainExports.defaultCalendar.lunar2solar(
-              lunarYear,
-              lunarMonth,
-              lunarDay,
-              lunarLeap
-            );
-            if (solarDate) {
-              setSolarYear(solarDate.solarYear);
-              setSolarMonth(solarDate.solarMonth);
-              setSolarDay(solarDate.solarDay);
-            }
-          } catch (e) {
-            console.debug("convert date error", e);
-          }
-          setCalendarType(mainExports.CalendarType.SOLAR);
-        }
-      } else if (calendarType === mainExports.CalendarType.SOLAR && value === mainExports.CalendarType.LUNAR) {
-        try {
-          if (solarYear && solarMonth && solarDay) {
-            const lunarDate = mainExports.defaultCalendar.solar2lunar(
-              solarYear,
-              solarMonth,
-              solarDay
-            );
-            if (lunarDate) {
-              setLunarYear(lunarDate.lunarYear);
-              setLunarMonth(lunarDate.lunarMonth);
-              setLunarDay(lunarDate.lunarDay);
-              setLunarLeap(lunarDate.isLeapMonth);
-            }
-          }
-        } catch (e) {
-          console.debug("convert date error", e);
-        }
-        setCalendarType(mainExports.CalendarType.LUNAR);
-      }
-    },
-    [
-      calendarType,
-      lunarDay,
-      lunarLeap,
-      lunarMonth,
-      lunarYear,
-      solarDay,
-      solarMonth,
-      solarYear
-    ]
-  );
-  const build = reactExports.useCallback(() => {
-    if (calendarType === mainExports.CalendarType.SOLAR) {
-      if (solarYear && solarMonth && solarDay && typeof bornTime === "number" && typeof configType === "number" && gender) {
-        props.updateConfig({
-          calendarType: mainExports.CalendarType.SOLAR,
-          solarYear,
-          solarMonth,
-          solarDay,
-          lunarYear: null,
-          lunarMonth: null,
-          lunarDay: null,
-          leap: false,
-          bornTime,
-          configType,
-          gender: gender === "F" ? mainExports.Gender.F : mainExports.Gender.M
-        });
-      }
-    } else if (calendarType === mainExports.CalendarType.LUNAR) {
-      if (lunarYear && lunarMonth && lunarDay && typeof bornTime === "number" && typeof configType === "number" && gender) {
-        props.updateConfig({
-          calendarType: mainExports.CalendarType.LUNAR,
-          lunarYear,
-          lunarMonth,
-          lunarDay,
-          leap: lunarLeap,
-          solarYear: null,
-          solarMonth: null,
-          solarDay: null,
-          bornTime,
-          configType,
-          gender: gender === "F" ? mainExports.Gender.F : mainExports.Gender.M
-        });
-      }
-    }
-  }, [
-    bornTime,
-    calendarType,
-    configType,
-    gender,
-    lunarDay,
-    lunarLeap,
-    lunarMonth,
-    lunarYear,
-    props,
-    solarDay,
-    solarMonth,
-    solarYear
-  ]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { title: "命盤設定", style: { width: 600 }, children: [
-    "性別: ",
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-block", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Select,
-      {
-        placeholder: "",
-        onChange: setGender,
-        options: genderOptions$1,
-        defaultValue: gender,
-        style: { width: 60 }
-      }
-    ) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(LineSeparator, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Segmented,
-        {
-          options: [
-            { label: "農曆", value: mainExports.CalendarType.LUNAR },
-            { label: "西曆", value: mainExports.CalendarType.SOLAR }
-          ],
-          defaultValue: calendarType,
-          onChange: onChangeCalendarType
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "div",
-        {
-          className: "inline-block",
-          style: { paddingLeft: 20, paddingRight: 0 },
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: calendarType !== mainExports.CalendarType.LUNAR ? "hide" : "", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-              LunarDateInput,
-              {
-                year: lunarYear,
-                month: lunarMonth,
-                day: lunarDay,
-                leap: lunarLeap,
-                onChangeYear: setLunarYear,
-                onChangeMonth: setLunarMonth,
-                onChangeDay: setLunarDay,
-                onChangeLeap: setLunarLeap
-              }
-            ) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: calendarType !== mainExports.CalendarType.SOLAR ? "hide" : "", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-              SolarDateInput,
-              {
-                year: solarYear,
-                month: solarMonth,
-                day: solarDay,
-                onChangeYear: setSolarYear,
-                onChangeMonth: setSolarMonth,
-                onChangeDay: setSolarDay
-              }
-            ) })
-          ]
-        }
-      )
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(LineSeparator, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-block", children: [
-        "時辰: ",
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Select,
-          {
-            placeholder: "時辰",
-            onChange: setBornTime,
-            options: bornTimeOptions,
-            defaultValue: bornTime,
-            style: { width: 200 }
-          }
-        )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "div",
-        {
-          className: "inline-block",
-          style: { paddingLeft: 20, paddingRight: 0 }
-        }
-      ),
-      "盤: ",
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-block", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Select,
-        {
-          placeholder: "盤",
-          onChange: setConfigType,
-          options: configTypeOptions,
-          defaultValue: configType,
-          style: { width: 80 }
-        }
-      ) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "div",
-        {
-          className: "inline-block",
-          style: { paddingLeft: 20, paddingRight: 0 }
-        }
-      )
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(LineSeparator, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Button$1, { type: "primary", onClick: build, children: "起盤" })
-  ] });
-};
-
-const MainMenu = ({ defaultValue }) => {
-  const [current, setCurrent] = reactExports.useState(defaultValue);
-  const [searchParams] = useSearchParams();
-  const urlSearchParams = reactExports.useMemo(() => {
-    const urlSearchParams2 = new URLSearchParams();
-    const cal = searchParams.get("cal");
-    if (cal) {
-      urlSearchParams2.set("cal", cal);
-    }
-    const y = searchParams.get("y");
-    if (y) {
-      urlSearchParams2.set("y", y);
-    }
-    const m = searchParams.get("m");
-    if (m) {
-      urlSearchParams2.set("m", m);
-    }
-    const d = searchParams.get("d");
-    if (d) {
-      urlSearchParams2.set("d", d);
-    }
-    const lp = searchParams.get("lp");
-    if (lp === "0" || lp === "1") {
-      urlSearchParams2.set("lp", lp);
-    }
-    const g = searchParams.get("g");
-    if (g) {
-      urlSearchParams2.set("g", g);
-    }
-    return urlSearchParams2;
-  }, [searchParams]);
-  const items = reactExports.useMemo(
-    () => [
-      {
-        label: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: `/buildBoard?${urlSearchParams.toString()}`, children: "起盤" }),
-        key: "buildBoard",
-        icon: /* @__PURE__ */ jsxRuntimeExports.jsx(RefIcon, {})
-      },
-      {
-        label: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: `/dayBoards?${urlSearchParams.toString()}`, children: "全日命盤" }),
-        key: "dayBoards",
-        icon: /* @__PURE__ */ jsxRuntimeExports.jsx(RefIcon$b, {})
-      }
-    ],
-    [urlSearchParams]
-  );
-  const onClick = reactExports.useCallback((e) => {
-    setCurrent(e.key);
-  }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Menu,
-    {
-      onClick,
-      selectedKeys: [current],
-      mode: "horizontal",
-      items
-    }
-  );
-};
-
-const searchParamsToDataStateMapper$1 = (searchParams) => {
-  const calendarType = searchParams.get("cal") === "S" ? mainExports.CalendarType.SOLAR : mainExports.CalendarType.LUNAR;
-  const year = strToNumOrNull(searchParams.get("y"));
-  const month = strToNumOrNull(searchParams.get("m"));
-  const day = strToNumOrNull(searchParams.get("d"));
-  const leap = searchParams.get("lp") === "1";
-  const bornTime = strToNumOrNull(searchParams.get("bt")) ?? 0;
-  const configType = strToNumOrNull(searchParams.get("cf")) ?? 1;
-  const gender = searchParams.get("g") === mainExports.Gender.F ? mainExports.Gender.F : mainExports.Gender.M;
-  const lunarYear = calendarType === mainExports.CalendarType.LUNAR ? year : null;
-  const lunarMonth = calendarType === mainExports.CalendarType.LUNAR ? month : null;
-  const lunarDay = calendarType === mainExports.CalendarType.LUNAR ? day : null;
-  const solarYear = calendarType === mainExports.CalendarType.SOLAR ? year : null;
-  const solarMonth = calendarType === mainExports.CalendarType.SOLAR ? month : null;
-  const solarDay = calendarType === mainExports.CalendarType.SOLAR ? day : null;
-  let runtimeCalendarType = searchParams.get("rcal") === "S" ? mainExports.CalendarType.SOLAR : mainExports.CalendarType.LUNAR;
-  const runtimeYear = strToNumOrNull(searchParams.get("ry"));
-  const runtimeMonth = strToNumOrNull(searchParams.get("rm"));
-  const runtimeDay = strToNumOrNull(searchParams.get("rd"));
-  const runtimeLeap = searchParams.get("rlp") === "1";
-  const runtimeLunarYear = runtimeCalendarType === mainExports.CalendarType.LUNAR ? runtimeYear : null;
-  const runtimeLunarMonth = runtimeCalendarType === mainExports.CalendarType.LUNAR ? runtimeMonth : null;
-  const runtimeLunarDay = runtimeCalendarType === mainExports.CalendarType.LUNAR ? runtimeDay : null;
-  let runtimeSolarYear = runtimeCalendarType === mainExports.CalendarType.SOLAR ? runtimeYear : null;
-  let runtimeSolarMonth = runtimeCalendarType === mainExports.CalendarType.SOLAR ? runtimeMonth : null;
-  let runtimeSolarDay = runtimeCalendarType === mainExports.CalendarType.SOLAR ? runtimeDay : null;
-  if (!runtimeYear || !runtimeMonth || !runtimeDay) {
-    const now = /* @__PURE__ */ new Date();
-    runtimeCalendarType = mainExports.CalendarType.SOLAR;
-    runtimeSolarYear = now.getFullYear();
-    runtimeSolarMonth = now.getMonth() + 1;
-    runtimeSolarDay = now.getDate();
-  }
-  const scope = strToNumOrNull(searchParams.get("sc")) ?? 0;
-  return {
-    config: {
-      calendarType,
-      lunarYear,
-      lunarMonth,
-      lunarDay,
-      leap,
-      solarYear,
-      solarMonth,
-      solarDay,
-      bornTime,
-      configType,
-      gender
-    },
-    runtimeConfig: {
-      calendarType: runtimeCalendarType,
-      lunarYear: runtimeLunarYear ?? void 0,
-      lunarMonth: runtimeLunarMonth ?? void 0,
-      lunarDay: runtimeLunarDay ?? void 0,
-      leap: runtimeLeap,
-      solarYear: runtimeSolarYear ?? void 0,
-      solarMonth: runtimeSolarMonth ?? void 0,
-      solarDay: runtimeSolarDay ?? void 0,
-      scope
-    }
-  };
-};
-const dataStateToDestinyConfigMapper$1 = (dataState) => {
-  try {
-    const _bornTimeGround = typeof dataState.bornTime === "number" && mainExports.DayTimeGround.get(dataState.bornTime) || void 0;
-    const _configType = typeof dataState.configType === "number" && [mainExports.ConfigType.GROUND, mainExports.ConfigType.SKY, mainExports.ConfigType.HUMAN][dataState.configType] || void 0;
-    const _gender = dataState.gender === mainExports.Gender.M ? mainExports.Gender.M : mainExports.Gender.F;
-    if (dataState.calendarType === mainExports.CalendarType.LUNAR) {
-      return mainExports.DestinyConfigBuilder.withlunar({
-        year: dataState.lunarYear,
-        month: dataState.lunarMonth,
-        day: dataState.lunarDay,
-        isLeapMonth: dataState.leap,
-        bornTimeGround: _bornTimeGround,
-        configType: _configType,
-        gender: _gender
-      });
-    } else if (dataState.calendarType === mainExports.CalendarType.SOLAR) {
-      return mainExports.DestinyConfigBuilder.withSolar({
-        year: dataState.solarYear,
-        month: dataState.solarMonth,
-        day: dataState.solarDay,
-        bornTimeGround: _bornTimeGround,
-        configType: _configType,
-        gender: _gender
-      });
-    }
-  } catch (e) {
-    console.error(e);
-  }
-  return null;
-};
-const dataStateToSearchParamsMapper$1 = (configDataState, runtimeConfigDataState) => {
-  const cal = configDataState.calendarType && configDataState.calendarType.charAt(0);
-  const y = numToStrOrEmpty(
-    configDataState.calendarType === mainExports.CalendarType.LUNAR ? configDataState.lunarYear : configDataState.solarYear
-  );
-  const m = numToStrOrEmpty(
-    configDataState.calendarType === mainExports.CalendarType.LUNAR ? configDataState.lunarMonth : configDataState.solarMonth
-  );
-  const d = numToStrOrEmpty(
-    configDataState.calendarType === mainExports.CalendarType.LUNAR ? configDataState.lunarDay : configDataState.solarDay
-  );
-  const lp = configDataState.leap ? "1" : "0";
-  const bt = numToStrOrEmpty(configDataState.bornTime);
-  const cf = numToStrOrEmpty(configDataState.configType);
-  const g = configDataState.gender === mainExports.Gender.F ? "F" : "M";
-  const extraRuntimeParams = {};
-  if (runtimeConfigDataState.scope && runtimeConfigDataState.scope > 0) {
-    extraRuntimeParams.rcal = runtimeConfigDataState.calendarType && runtimeConfigDataState.calendarType.charAt(0);
-    extraRuntimeParams.ry = numToStrOrEmpty(
-      runtimeConfigDataState.calendarType === mainExports.CalendarType.LUNAR ? runtimeConfigDataState.lunarYear : runtimeConfigDataState.solarYear
-    );
-    extraRuntimeParams.rm = numToStrOrEmpty(
-      runtimeConfigDataState.calendarType === mainExports.CalendarType.LUNAR ? runtimeConfigDataState.lunarMonth : runtimeConfigDataState.solarMonth
-    );
-    extraRuntimeParams.rd = numToStrOrEmpty(
-      runtimeConfigDataState.calendarType === mainExports.CalendarType.LUNAR ? runtimeConfigDataState.lunarDay : runtimeConfigDataState.solarDay
-    );
-    extraRuntimeParams.rlp = runtimeConfigDataState.leap ? "1" : "0";
-    extraRuntimeParams.sc = runtimeConfigDataState.scope;
-  }
-  return new URLSearchParams({
-    cal,
-    y,
-    m,
-    d,
-    lp,
-    bt,
-    cf,
-    g,
-    ...extraRuntimeParams
-  });
 };
 
 // these aren't really private, but nor are they really useful to document
@@ -68480,6 +68000,517 @@ function friendlyDateTime(dateTimeish) {
   }
 }
 
+const LineSeparator = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { marginTop: 15 } });
+};
+
+const bornTimeOptions = [
+  { label: "早子 (00:00am-00:59am)", value: 0 },
+  { label: "丑 (01:00am-02:59am)", value: 1 },
+  { label: "寅 (03:00am-04:59am)", value: 2 },
+  { label: "卯 (05:00am-06:59am)", value: 3 },
+  { label: "辰 (07:00am-08:59am)", value: 4 },
+  { label: "巳 (09:00am-10:59am)", value: 5 },
+  { label: "午 (11:00am-12:59pm)", value: 6 },
+  { label: "未 (13:00pm-14:59pm)", value: 7 },
+  { label: "申 (15:00pm-16:59pm)", value: 8 },
+  { label: "酉 (17:00pm-18:59pm)", value: 9 },
+  { label: "戌 (19:00pm-20:59pm)", value: 10 },
+  { label: "亥 (21:00pm-22:59pm)", value: 11 },
+  { label: "夜子 (23:00pm-23:59pm)", value: 12 }
+];
+const configTypeOptions = [
+  { label: "地盤", value: 0 },
+  { label: "天盤", value: 1 },
+  { label: "人盤", value: 2 }
+];
+const genderOptions$1 = [
+  { label: "男", value: "M" },
+  { label: "女", value: "F" }
+];
+const selectStyle = {
+  height: 32,
+  borderRadius: 6,
+  border: "1px solid #d9d9d9",
+  padding: "0 8px"
+};
+const DestinyConfigInputPanel = (props) => {
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const getSolarMonthMaxDay = (year, month) => {
+    return DateTime.local(year, month, 1).daysInMonth ?? 31;
+  };
+  const getLunarMonthMaxDay = (year, month, leap) => {
+    try {
+      return {
+        maxDay: mainExports.defaultCalendar.lunarMonthDays(year, month, leap),
+        leap
+      };
+    } catch (e) {
+      if (leap) {
+        try {
+          return {
+            maxDay: mainExports.defaultCalendar.lunarMonthDays(year, month, false),
+            leap: false
+          };
+        } catch (fallbackError) {
+          console.debug("lunar month days error", e, fallbackError);
+        }
+      } else {
+        console.debug("lunar month days error", e);
+      }
+    }
+    return { maxDay: 30, leap: false };
+  };
+  const normalizeDataState = (state) => {
+    if (state.calendarType === mainExports.CalendarType.LUNAR) {
+      const lunarYear = state.lunarYear ?? 1990;
+      const lunarMonth = clamp(state.lunarMonth ?? 1, 1, 12);
+      const monthInfo = getLunarMonthMaxDay(lunarYear, lunarMonth, state.leap);
+      const lunarDay = clamp(state.lunarDay ?? 1, 1, monthInfo.maxDay);
+      return {
+        ...state,
+        lunarYear,
+        lunarMonth,
+        lunarDay,
+        leap: monthInfo.leap
+      };
+    }
+    const solarYear = state.solarYear ?? 1990;
+    const solarMonth = clamp(state.solarMonth ?? 1, 1, 12);
+    const solarDay = clamp(
+      state.solarDay ?? 1,
+      1,
+      getSolarMonthMaxDay(solarYear, solarMonth)
+    );
+    return {
+      ...state,
+      solarYear,
+      solarMonth,
+      solarDay
+    };
+  };
+  const [dataState, setDataState] = reactExports.useState({
+    calendarType: props.calendarType ?? mainExports.CalendarType.LUNAR,
+    lunarYear: props.lunarYear ?? 1990,
+    lunarMonth: props.lunarMonth ?? 1,
+    lunarDay: props.lunarDay ?? 1,
+    leap: props.leap ?? false,
+    solarYear: props.solarYear ?? 1990,
+    solarMonth: props.solarMonth ?? 1,
+    solarDay: props.solarDay ?? 1,
+    bornTime: props.bornTime ?? null,
+    configType: props.configType ?? 1,
+    gender: props.gender ?? null
+  });
+  const onChangeCalendarType = reactExports.useCallback(
+    (value) => {
+      setDataState((prev) => {
+        const normalizedPrev = normalizeDataState(prev);
+        if (normalizedPrev.calendarType === mainExports.CalendarType.LUNAR && value === mainExports.CalendarType.SOLAR && normalizedPrev.lunarYear && normalizedPrev.lunarMonth && normalizedPrev.lunarDay) {
+          try {
+            const solarDate = mainExports.defaultCalendar.lunar2solar(
+              normalizedPrev.lunarYear,
+              normalizedPrev.lunarMonth,
+              normalizedPrev.lunarDay,
+              normalizedPrev.leap
+            );
+            if (solarDate) {
+              return {
+                ...normalizedPrev,
+                calendarType: mainExports.CalendarType.SOLAR,
+                solarYear: solarDate.solarYear,
+                solarMonth: solarDate.solarMonth,
+                solarDay: solarDate.solarDay
+              };
+            }
+          } catch (e) {
+            console.debug("convert date error", e);
+          }
+          return {
+            ...normalizedPrev,
+            calendarType: mainExports.CalendarType.SOLAR
+          };
+        }
+        if (normalizedPrev.calendarType === mainExports.CalendarType.SOLAR && value === mainExports.CalendarType.LUNAR && normalizedPrev.solarYear && normalizedPrev.solarMonth && normalizedPrev.solarDay) {
+          try {
+            const lunarDate = mainExports.defaultCalendar.solar2lunar(
+              normalizedPrev.solarYear,
+              normalizedPrev.solarMonth,
+              normalizedPrev.solarDay
+            );
+            if (lunarDate) {
+              return {
+                ...normalizedPrev,
+                calendarType: mainExports.CalendarType.LUNAR,
+                lunarYear: lunarDate.lunarYear,
+                lunarMonth: lunarDate.lunarMonth,
+                lunarDay: lunarDate.lunarDay,
+                leap: lunarDate.isLeapMonth
+              };
+            }
+          } catch (e) {
+            console.debug("convert date error", e);
+          }
+          return {
+            ...normalizedPrev,
+            calendarType: mainExports.CalendarType.LUNAR
+          };
+        }
+        return normalizedPrev;
+      });
+    },
+    []
+  );
+  const build = reactExports.useCallback(() => {
+    const normalizedState = normalizeDataState(dataState);
+    if (normalizedState.calendarType === mainExports.CalendarType.SOLAR) {
+      if (normalizedState.solarYear && normalizedState.solarMonth && normalizedState.solarDay && typeof normalizedState.bornTime === "number" && typeof normalizedState.configType === "number" && normalizedState.gender) {
+        props.updateConfig({
+          calendarType: mainExports.CalendarType.SOLAR,
+          solarYear: normalizedState.solarYear,
+          solarMonth: normalizedState.solarMonth,
+          solarDay: normalizedState.solarDay,
+          lunarYear: null,
+          lunarMonth: null,
+          lunarDay: null,
+          leap: false,
+          bornTime: normalizedState.bornTime,
+          configType: normalizedState.configType,
+          gender: normalizedState.gender === "F" ? mainExports.Gender.F : mainExports.Gender.M
+        });
+      }
+    } else if (normalizedState.calendarType === mainExports.CalendarType.LUNAR) {
+      if (normalizedState.lunarYear && normalizedState.lunarMonth && normalizedState.lunarDay && typeof normalizedState.bornTime === "number" && typeof normalizedState.configType === "number" && normalizedState.gender) {
+        props.updateConfig({
+          calendarType: mainExports.CalendarType.LUNAR,
+          lunarYear: normalizedState.lunarYear,
+          lunarMonth: normalizedState.lunarMonth,
+          lunarDay: normalizedState.lunarDay,
+          leap: normalizedState.leap,
+          solarYear: null,
+          solarMonth: null,
+          solarDay: null,
+          bornTime: normalizedState.bornTime,
+          configType: normalizedState.configType,
+          gender: normalizedState.gender === "F" ? mainExports.Gender.F : mainExports.Gender.M
+        });
+      }
+    }
+  }, [
+    dataState,
+    props.updateConfig
+  ]);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { title: "命盤設定", style: { width: 600 }, children: [
+    "性別: ",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-block", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "select",
+      {
+        value: dataState.gender ?? "",
+        onChange: (e) => setDataState((prev) => ({
+          ...prev,
+          gender: e.target.value || null
+        })),
+        style: { ...selectStyle, width: 60 },
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "請選擇" }),
+          genderOptions$1.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
+        ]
+      }
+    ) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(LineSeparator, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-block", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { style: { marginRight: 10 }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "radio",
+              name: "destiny-calendar-type",
+              checked: dataState.calendarType === mainExports.CalendarType.LUNAR,
+              onChange: () => onChangeCalendarType(mainExports.CalendarType.LUNAR)
+            }
+          ),
+          " ",
+          "農曆"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "radio",
+              name: "destiny-calendar-type",
+              checked: dataState.calendarType === mainExports.CalendarType.SOLAR,
+              onChange: () => onChangeCalendarType(mainExports.CalendarType.SOLAR)
+            }
+          ),
+          " ",
+          "西曆"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "inline-block",
+          style: { paddingLeft: 20, paddingRight: 0 },
+          children: [
+            dataState.calendarType === mainExports.CalendarType.LUNAR ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+              LunarDateInput,
+              {
+                year: dataState.lunarYear,
+                month: dataState.lunarMonth,
+                day: dataState.lunarDay,
+                leap: dataState.leap,
+                onChangeYear: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, lunarYear: value })
+                ),
+                onChangeMonth: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, lunarMonth: value })
+                ),
+                onChangeDay: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, lunarDay: value })
+                ),
+                onChangeLeap: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, leap: value })
+                )
+              }
+            ) : null,
+            dataState.calendarType === mainExports.CalendarType.SOLAR ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+              SolarDateInput,
+              {
+                year: dataState.solarYear,
+                month: dataState.solarMonth,
+                day: dataState.solarDay,
+                onChangeYear: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, solarYear: value })
+                ),
+                onChangeMonth: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, solarMonth: value })
+                ),
+                onChangeDay: (value) => setDataState(
+                  (prev) => normalizeDataState({ ...prev, solarDay: value })
+                )
+              }
+            ) : null
+          ]
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(LineSeparator, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-block", children: [
+        "時辰: ",
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "select",
+          {
+            value: typeof dataState.bornTime === "number" ? String(dataState.bornTime) : "",
+            onChange: (e) => setDataState((prev) => ({
+              ...prev,
+              bornTime: e.target.value === "" ? null : Number(e.target.value)
+            })),
+            style: { ...selectStyle, width: 200 },
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "時辰" }),
+              bornTimeOptions.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
+            ]
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "div",
+        {
+          className: "inline-block",
+          style: { paddingLeft: 20, paddingRight: 0 }
+        }
+      ),
+      "盤: ",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-block", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "select",
+        {
+          value: typeof dataState.configType === "number" ? String(dataState.configType) : "",
+          onChange: (e) => setDataState((prev) => ({
+            ...prev,
+            configType: e.target.value === "" ? null : Number(e.target.value)
+          })),
+          style: { ...selectStyle, width: 80 },
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "盤" }),
+            configTypeOptions.map((option) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: option.value, children: option.label }, option.value))
+          ]
+        }
+      ) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "div",
+        {
+          className: "inline-block",
+          style: { paddingLeft: 20, paddingRight: 0 }
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(LineSeparator, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Button$1, { type: "primary", onClick: build, children: "起盤" })
+  ] });
+};
+
+const MainMenu = ({ defaultValue }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const sharedQuery = reactExports.useMemo(() => {
+    const urlSearchParams = new URLSearchParams();
+    const sourceParams = new URLSearchParams(location.search);
+    const cal = sourceParams.get("cal");
+    if (cal) {
+      urlSearchParams.set("cal", cal);
+    }
+    const y = sourceParams.get("y");
+    if (y) {
+      urlSearchParams.set("y", y);
+    }
+    const m = sourceParams.get("m");
+    if (m) {
+      urlSearchParams.set("m", m);
+    }
+    const d = sourceParams.get("d");
+    if (d) {
+      urlSearchParams.set("d", d);
+    }
+    const lp = sourceParams.get("lp");
+    if (lp === "0" || lp === "1") {
+      urlSearchParams.set("lp", lp);
+    }
+    const g = sourceParams.get("g");
+    if (g) {
+      urlSearchParams.set("g", g);
+    }
+    return urlSearchParams.toString();
+  }, [location.search]);
+  const selectedKey = reactExports.useMemo(() => {
+    if (location.pathname.includes("dayBoards")) {
+      return "dayBoards";
+    }
+    if (location.pathname.includes("buildBoard")) {
+      return "buildBoard";
+    }
+    return defaultValue;
+  }, [defaultValue, location.pathname]);
+  const go = (key) => {
+    navigate({
+      pathname: `/${key}`,
+      search: sharedQuery ? `?${sharedQuery}` : ""
+    });
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { marginBottom: 12 }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Button$1,
+      {
+        type: selectedKey === "buildBoard" ? "primary" : "default",
+        onClick: () => go("buildBoard"),
+        style: { marginRight: 8 },
+        children: "起盤"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Button$1,
+      {
+        type: selectedKey === "dayBoards" ? "primary" : "default",
+        onClick: () => go("dayBoards"),
+        children: "全日命盤"
+      }
+    )
+  ] });
+};
+
+const searchParamsToDataStateMapper$1 = (searchParams) => {
+  const calendarType = searchParams.get("cal") === "S" ? mainExports.CalendarType.SOLAR : mainExports.CalendarType.LUNAR;
+  const year = strToNumOrNull(searchParams.get("y"));
+  const month = strToNumOrNull(searchParams.get("m"));
+  const day = strToNumOrNull(searchParams.get("d"));
+  const leap = searchParams.get("lp") === "1";
+  const bornTime = strToNumOrNull(searchParams.get("bt")) ?? 0;
+  const configType = strToNumOrNull(searchParams.get("cf")) ?? 1;
+  const gender = searchParams.get("g") === mainExports.Gender.F ? mainExports.Gender.F : mainExports.Gender.M;
+  const lunarYear = calendarType === mainExports.CalendarType.LUNAR ? year : null;
+  const lunarMonth = calendarType === mainExports.CalendarType.LUNAR ? month : null;
+  const lunarDay = calendarType === mainExports.CalendarType.LUNAR ? day : null;
+  const solarYear = calendarType === mainExports.CalendarType.SOLAR ? year : null;
+  const solarMonth = calendarType === mainExports.CalendarType.SOLAR ? month : null;
+  const solarDay = calendarType === mainExports.CalendarType.SOLAR ? day : null;
+  let runtimeCalendarType = searchParams.get("rcal") === "S" ? mainExports.CalendarType.SOLAR : mainExports.CalendarType.LUNAR;
+  const runtimeYear = strToNumOrNull(searchParams.get("ry"));
+  const runtimeMonth = strToNumOrNull(searchParams.get("rm"));
+  const runtimeDay = strToNumOrNull(searchParams.get("rd"));
+  const runtimeLeap = searchParams.get("rlp") === "1";
+  const runtimeLunarYear = runtimeCalendarType === mainExports.CalendarType.LUNAR ? runtimeYear : null;
+  const runtimeLunarMonth = runtimeCalendarType === mainExports.CalendarType.LUNAR ? runtimeMonth : null;
+  const runtimeLunarDay = runtimeCalendarType === mainExports.CalendarType.LUNAR ? runtimeDay : null;
+  let runtimeSolarYear = runtimeCalendarType === mainExports.CalendarType.SOLAR ? runtimeYear : null;
+  let runtimeSolarMonth = runtimeCalendarType === mainExports.CalendarType.SOLAR ? runtimeMonth : null;
+  let runtimeSolarDay = runtimeCalendarType === mainExports.CalendarType.SOLAR ? runtimeDay : null;
+  if (!runtimeYear || !runtimeMonth || !runtimeDay) {
+    const now = /* @__PURE__ */ new Date();
+    runtimeCalendarType = mainExports.CalendarType.SOLAR;
+    runtimeSolarYear = now.getFullYear();
+    runtimeSolarMonth = now.getMonth() + 1;
+    runtimeSolarDay = now.getDate();
+  }
+  const scope = strToNumOrNull(searchParams.get("sc")) ?? 0;
+  return {
+    config: {
+      calendarType,
+      lunarYear,
+      lunarMonth,
+      lunarDay,
+      leap,
+      solarYear,
+      solarMonth,
+      solarDay,
+      bornTime,
+      configType,
+      gender
+    },
+    runtimeConfig: {
+      calendarType: runtimeCalendarType,
+      lunarYear: runtimeLunarYear ?? void 0,
+      lunarMonth: runtimeLunarMonth ?? void 0,
+      lunarDay: runtimeLunarDay ?? void 0,
+      leap: runtimeLeap,
+      solarYear: runtimeSolarYear ?? void 0,
+      solarMonth: runtimeSolarMonth ?? void 0,
+      solarDay: runtimeSolarDay ?? void 0,
+      scope
+    }
+  };
+};
+const dataStateToDestinyConfigMapper$1 = (dataState) => {
+  try {
+    const _bornTimeGround = typeof dataState.bornTime === "number" && mainExports.DayTimeGround.get(dataState.bornTime) || void 0;
+    const _configType = typeof dataState.configType === "number" && [mainExports.ConfigType.GROUND, mainExports.ConfigType.SKY, mainExports.ConfigType.HUMAN][dataState.configType] || void 0;
+    const _gender = dataState.gender === mainExports.Gender.M ? mainExports.Gender.M : mainExports.Gender.F;
+    if (dataState.calendarType === mainExports.CalendarType.LUNAR) {
+      return mainExports.DestinyConfigBuilder.withlunar({
+        year: dataState.lunarYear,
+        month: dataState.lunarMonth,
+        day: dataState.lunarDay,
+        isLeapMonth: dataState.leap,
+        bornTimeGround: _bornTimeGround,
+        configType: _configType,
+        gender: _gender
+      });
+    } else if (dataState.calendarType === mainExports.CalendarType.SOLAR) {
+      return mainExports.DestinyConfigBuilder.withSolar({
+        year: dataState.solarYear,
+        month: dataState.solarMonth,
+        day: dataState.solarDay,
+        bornTimeGround: _bornTimeGround,
+        configType: _configType,
+        gender: _gender
+      });
+    }
+  } catch (e) {
+    console.error(e);
+  }
+  return null;
+};
+
 const marks = {
   0: {
     style: {
@@ -68513,6 +68544,45 @@ const marks = {
   }
 };
 const RuntimeConfigInputPanel = (props) => {
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const getSolarMonthMaxDay = (year, month) => {
+    return DateTime.local(year, month, 1).daysInMonth ?? 31;
+  };
+  const getLunarMonthMaxDay = (year, month, leap) => {
+    try {
+      return {
+        maxDay: mainExports.defaultCalendar.lunarMonthDays(year, month, leap),
+        leap
+      };
+    } catch (e) {
+      if (leap) {
+        try {
+          return {
+            maxDay: mainExports.defaultCalendar.lunarMonthDays(year, month, false),
+            leap: false
+          };
+        } catch (fallbackError) {
+          console.debug("lunar month days error", e, fallbackError);
+        }
+      } else {
+        console.debug("lunar month days error", e);
+      }
+    }
+    return { maxDay: 30, leap: false };
+  };
+  const normalizeLunarState = (state) => {
+    const lunarYear = state.lunarYear;
+    const lunarMonth = clamp(state.lunarMonth, 1, 12);
+    const monthInfo = getLunarMonthMaxDay(lunarYear, lunarMonth, state.lunarLeap);
+    const lunarDay = clamp(state.lunarDay, 1, monthInfo.maxDay);
+    return {
+      ...state,
+      lunarYear,
+      lunarMonth,
+      lunarDay,
+      lunarLeap: monthInfo.leap
+    };
+  };
   const [dataState, setDataState] = reactExports.useState({
     calendarType: props.calendarType ?? mainExports.CalendarType.SOLAR,
     lunarYear: props.lunarYear ?? 1990,
@@ -68524,50 +68594,37 @@ const RuntimeConfigInputPanel = (props) => {
     solarDay: props.solarDay ?? 1,
     scope: props.scope ?? 0
   });
-  const [isRefresh, setIsRefresh] = reactExports.useState(false);
-  reactExports.useEffect(() => {
-    console.log("props updated", props);
-    const now = DateTime.now();
-    const lunarDate = mainExports.defaultCalendar.solar2lunar(now.year, now.month, now.day);
-    setDataState({
-      calendarType: props.calendarType ?? mainExports.CalendarType.SOLAR,
-      lunarYear: props.lunarYear ?? lunarDate.lunarYear,
-      lunarMonth: props.lunarMonth ?? lunarDate.lunarMonth,
-      lunarDay: props.lunarDay ?? lunarDate.lunarDay,
-      lunarLeap: props.leap ?? lunarDate.isLeapMonth,
-      solarYear: props.solarYear ?? now.year,
-      solarMonth: props.solarMonth ?? now.month,
-      solarDay: props.solarDay ?? now.day,
-      scope: props.scope ?? 0
-    });
-  }, [props]);
-  const updateRuntimeConfig = reactExports.useCallback(() => {
-    props.updateRuntimeConfig({
-      calendarType: dataState.calendarType,
-      lunarYear: dataState.lunarYear ?? void 0,
-      lunarMonth: dataState.lunarMonth ?? void 0,
-      lunarDay: dataState.lunarDay ?? void 0,
-      leap: dataState.lunarLeap,
-      solarYear: dataState.solarYear ?? void 0,
-      solarMonth: dataState.solarMonth ?? void 0,
-      solarDay: dataState.solarDay ?? void 0,
-      scope: dataState.scope
-    });
-  }, [dataState]);
+  const updateRuntimeConfig = reactExports.useCallback(
+    (state) => {
+      props.updateRuntimeConfig({
+        calendarType: state.calendarType,
+        lunarYear: state.lunarYear ?? void 0,
+        lunarMonth: state.lunarMonth ?? void 0,
+        lunarDay: state.lunarDay ?? void 0,
+        leap: state.lunarLeap,
+        solarYear: state.solarYear ?? void 0,
+        solarMonth: state.solarMonth ?? void 0,
+        solarDay: state.solarDay ?? void 0,
+        scope: state.scope
+      });
+    },
+    [props.updateRuntimeConfig]
+  );
   const syncSolarLunarCalendar = reactExports.useCallback(
     (dataState2) => {
       if (dataState2.calendarType === mainExports.CalendarType.LUNAR) {
-        if (dataState2.lunarYear && dataState2.lunarMonth && dataState2.lunarDay) {
+        const normalized = normalizeLunarState(dataState2);
+        if (normalized.lunarYear && normalized.lunarMonth && normalized.lunarDay) {
           try {
             const solarDate = mainExports.defaultCalendar.lunar2solar(
-              dataState2.lunarYear,
-              dataState2.lunarMonth,
-              dataState2.lunarDay,
-              dataState2.lunarLeap
+              normalized.lunarYear,
+              normalized.lunarMonth,
+              normalized.lunarDay,
+              normalized.lunarLeap
             );
             if (solarDate) {
               return {
-                ...dataState2,
+                ...normalized,
                 solarYear: solarDate.solarYear,
                 solarMonth: solarDate.solarMonth,
                 solarDay: solarDate.solarDay
@@ -68577,17 +68634,28 @@ const RuntimeConfigInputPanel = (props) => {
             console.debug("convert date error", e);
           }
         }
+        return normalized;
       } else if (dataState2.calendarType === mainExports.CalendarType.SOLAR) {
+        const solarYear = dataState2.solarYear;
+        const solarMonth = clamp(dataState2.solarMonth, 1, 12);
+        const solarDay = clamp(
+          dataState2.solarDay,
+          1,
+          getSolarMonthMaxDay(solarYear, solarMonth)
+        );
         try {
-          if (dataState2.solarYear && dataState2.solarMonth && dataState2.solarDay) {
+          if (solarYear && solarMonth && solarDay) {
             const lunarDate = mainExports.defaultCalendar.solar2lunar(
-              dataState2.solarYear,
-              dataState2.solarMonth,
-              dataState2.solarDay
+              solarYear,
+              solarMonth,
+              solarDay
             );
             if (lunarDate) {
               return {
                 ...dataState2,
+                solarYear,
+                solarMonth,
+                solarDay,
                 calendarType: mainExports.CalendarType.SOLAR,
                 lunarYear: lunarDate.lunarYear,
                 lunarMonth: lunarDate.lunarMonth,
@@ -68599,6 +68667,12 @@ const RuntimeConfigInputPanel = (props) => {
         } catch (e) {
           console.debug("convert date error", e);
         }
+        return {
+          ...dataState2,
+          solarYear,
+          solarMonth,
+          solarDay
+        };
       }
       return {
         ...dataState2
@@ -68608,36 +68682,67 @@ const RuntimeConfigInputPanel = (props) => {
   );
   const onChangeCalendarType = reactExports.useCallback(
     (value) => {
-      if (dataState.calendarType === mainExports.CalendarType.LUNAR && value === mainExports.CalendarType.SOLAR) {
-        setDataState(
-          syncSolarLunarCalendar({
-            ...dataState,
-            calendarType: mainExports.CalendarType.SOLAR
-          })
-        );
-      } else if (dataState.calendarType === mainExports.CalendarType.SOLAR && value === mainExports.CalendarType.LUNAR) {
-        setDataState(
-          syncSolarLunarCalendar({
-            ...dataState,
-            calendarType: mainExports.CalendarType.LUNAR
-          })
-        );
-      }
+      setDataState((prev) => {
+        if (prev.calendarType === mainExports.CalendarType.LUNAR && value === mainExports.CalendarType.SOLAR) {
+          try {
+            const solarDate = mainExports.defaultCalendar.lunar2solar(
+              prev.lunarYear,
+              prev.lunarMonth,
+              prev.lunarDay,
+              prev.lunarLeap
+            );
+            return {
+              ...prev,
+              calendarType: mainExports.CalendarType.SOLAR,
+              solarYear: solarDate.solarYear,
+              solarMonth: solarDate.solarMonth,
+              solarDay: solarDate.solarDay
+            };
+          } catch (e) {
+            console.debug("convert date error", e);
+            return {
+              ...prev,
+              calendarType: mainExports.CalendarType.SOLAR
+            };
+          }
+        }
+        if (prev.calendarType === mainExports.CalendarType.SOLAR && value === mainExports.CalendarType.LUNAR) {
+          try {
+            const lunarDate = mainExports.defaultCalendar.solar2lunar(
+              prev.solarYear,
+              prev.solarMonth,
+              prev.solarDay
+            );
+            return {
+              ...prev,
+              calendarType: mainExports.CalendarType.LUNAR,
+              lunarYear: lunarDate.lunarYear,
+              lunarMonth: lunarDate.lunarMonth,
+              lunarDay: lunarDate.lunarDay,
+              lunarLeap: lunarDate.isLeapMonth
+            };
+          } catch (e) {
+            console.debug("convert date error", e);
+            return {
+              ...prev,
+              calendarType: mainExports.CalendarType.LUNAR
+            };
+          }
+        }
+        return prev;
+      });
     },
-    [dataState, syncSolarLunarCalendar]
+    []
   );
   reactExports.useEffect(() => {
-    if (isRefresh) {
-      setIsRefresh(false);
-      updateRuntimeConfig();
-    }
-  }, [isRefresh, updateRuntimeConfig]);
+    updateRuntimeConfig(dataState);
+  }, [dataState, updateRuntimeConfig]);
   const goToday = reactExports.useCallback(() => {
     const { year, month, day } = DateTime.now();
     const lunarDate = mainExports.defaultCalendar.solar2lunar(year, month, day);
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.SOLAR,
         solarYear: year,
         solarMonth: month,
@@ -68649,140 +68754,145 @@ const RuntimeConfigInputPanel = (props) => {
         scope: 4
       })
     );
-    setIsRefresh(true);
   }, [dataState, syncSolarLunarCalendar]);
   const goPrevTenYear = reactExports.useCallback(() => {
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.LUNAR,
-        lunarYear: dataState.lunarYear - 10,
+        lunarYear: prev.lunarYear - 10,
         lunarLeap: false,
         scope: 1
       })
     );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+  }, [syncSolarLunarCalendar]);
   const goNextTenYear = reactExports.useCallback(() => {
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.LUNAR,
-        lunarYear: dataState.lunarYear + 10,
+        lunarYear: prev.lunarYear + 10,
         lunarLeap: false,
         scope: 1
       })
     );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+  }, [syncSolarLunarCalendar]);
   const goPrevYear = reactExports.useCallback(() => {
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.LUNAR,
-        lunarYear: dataState.lunarYear - 1,
+        lunarYear: prev.lunarYear - 1,
         lunarLeap: false,
         scope: 2
       })
     );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+  }, [syncSolarLunarCalendar]);
   const goNextYear = reactExports.useCallback(() => {
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.LUNAR,
-        lunarYear: dataState.lunarYear + 1,
+        lunarYear: prev.lunarYear + 1,
         lunarLeap: false,
         scope: 2
       })
     );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+  }, [syncSolarLunarCalendar]);
   const goPrevMonth = reactExports.useCallback(() => {
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.LUNAR,
-        lunarYear: dataState.lunarMonth > 1 ? dataState.lunarYear : dataState.lunarYear - 1,
-        lunarMonth: dataState.lunarMonth > 1 ? dataState.lunarMonth - 1 : 12,
+        lunarYear: prev.lunarMonth > 1 ? prev.lunarYear : prev.lunarYear - 1,
+        lunarMonth: prev.lunarMonth > 1 ? prev.lunarMonth - 1 : 12,
         lunarLeap: false,
         scope: 3
       })
     );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+  }, [syncSolarLunarCalendar]);
   const goNextMonth = reactExports.useCallback(() => {
     setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+      (prev) => syncSolarLunarCalendar({
+        ...prev,
         calendarType: mainExports.CalendarType.LUNAR,
-        lunarYear: dataState.lunarMonth < 12 ? dataState.lunarYear : dataState.lunarYear + 1,
-        lunarMonth: dataState.lunarMonth < 12 ? dataState.lunarMonth + 1 : 1,
+        lunarYear: prev.lunarMonth < 12 ? prev.lunarYear : prev.lunarYear + 1,
+        lunarMonth: prev.lunarMonth < 12 ? prev.lunarMonth + 1 : 1,
         lunarLeap: false,
         scope: 3
       })
     );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+  }, [syncSolarLunarCalendar]);
   const goPrevDay = reactExports.useCallback(() => {
-    const solarDate = mainExports.defaultCalendar.lunar2solar(
-      dataState.lunarYear,
-      dataState.lunarMonth,
-      dataState.lunarDay,
-      dataState.lunarLeap
-    );
-    const { year, month, day } = DateTime.fromObject({
-      year: solarDate.solarYear,
-      month: solarDate.solarMonth,
-      day: solarDate.solarDay,
-      hour: 0,
-      minute: 0,
-      second: 0
-    }).minus({ day: 1 });
-    const lunarDate = mainExports.defaultCalendar.solar2lunar(year, month, day);
-    setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+    setDataState((prev) => {
+      const normalized = normalizeLunarState(prev);
+      let solarDate;
+      try {
+        solarDate = mainExports.defaultCalendar.lunar2solar(
+          normalized.lunarYear,
+          normalized.lunarMonth,
+          normalized.lunarDay,
+          normalized.lunarLeap
+        );
+      } catch (e) {
+        console.debug("convert date error", e);
+        return prev;
+      }
+      const { year, month, day } = DateTime.fromObject({
+        year: solarDate.solarYear,
+        month: solarDate.solarMonth,
+        day: solarDate.solarDay,
+        hour: 0,
+        minute: 0,
+        second: 0
+      }).minus({ day: 1 });
+      const lunarDate = mainExports.defaultCalendar.solar2lunar(year, month, day);
+      return syncSolarLunarCalendar({
+        ...normalized,
         calendarType: mainExports.CalendarType.LUNAR,
         lunarYear: lunarDate.lunarYear,
         lunarMonth: lunarDate.lunarMonth,
         lunarDay: lunarDate.lunarDay,
         lunarLeap: lunarDate.isLeapMonth,
         scope: 4
-      })
-    );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+      });
+    });
+  }, [syncSolarLunarCalendar]);
   const goNextDay = reactExports.useCallback(() => {
-    const solarDate = mainExports.defaultCalendar.lunar2solar(
-      dataState.lunarYear,
-      dataState.lunarMonth,
-      dataState.lunarDay,
-      dataState.lunarLeap
-    );
-    const { year, month, day } = DateTime.fromObject({
-      year: solarDate.solarYear,
-      month: solarDate.solarMonth,
-      day: solarDate.solarDay,
-      hour: 0,
-      minute: 0,
-      second: 0
-    }).plus({ day: 1 });
-    const lunarDate = mainExports.defaultCalendar.solar2lunar(year, month, day);
-    setDataState(
-      syncSolarLunarCalendar({
-        ...dataState,
+    setDataState((prev) => {
+      const normalized = normalizeLunarState(prev);
+      let solarDate;
+      try {
+        solarDate = mainExports.defaultCalendar.lunar2solar(
+          normalized.lunarYear,
+          normalized.lunarMonth,
+          normalized.lunarDay,
+          normalized.lunarLeap
+        );
+      } catch (e) {
+        console.debug("convert date error", e);
+        return prev;
+      }
+      const { year, month, day } = DateTime.fromObject({
+        year: solarDate.solarYear,
+        month: solarDate.solarMonth,
+        day: solarDate.solarDay,
+        hour: 0,
+        minute: 0,
+        second: 0
+      }).plus({ day: 1 });
+      const lunarDate = mainExports.defaultCalendar.solar2lunar(year, month, day);
+      return syncSolarLunarCalendar({
+        ...normalized,
         calendarType: mainExports.CalendarType.LUNAR,
         lunarYear: lunarDate.lunarYear,
         lunarMonth: lunarDate.lunarMonth,
         lunarDay: lunarDate.lunarDay,
         lunarLeap: lunarDate.isLeapMonth,
         scope: 4
-      })
-    );
-    setIsRefresh(true);
-  }, [dataState, syncSolarLunarCalendar]);
+      });
+    });
+  }, [syncSolarLunarCalendar]);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { style: { width: 600 }, title: "流曜顯示", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       Slider,
@@ -68793,90 +68903,98 @@ const RuntimeConfigInputPanel = (props) => {
         min: 0,
         max: 4,
         onChange: (value) => {
-          setDataState({ ...dataState, scope: value });
-          setIsRefresh(true);
+          setDataState((prev) => ({ ...prev, scope: value }));
         },
-        tooltip: { formatter: null }
+        tooltip: { open: false }
       }
     ),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        Segmented,
-        {
-          options: [
-            { label: "農曆", value: mainExports.CalendarType.LUNAR },
-            { label: "西曆", value: mainExports.CalendarType.SOLAR }
-          ],
-          value: dataState.calendarType,
-          onChange: (value) => {
-            onChangeCalendarType(value);
-            setIsRefresh(true);
-          }
-        }
-      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-block", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { style: { marginRight: 10 }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "radio",
+              name: "runtime-calendar-type",
+              checked: dataState.calendarType === mainExports.CalendarType.LUNAR,
+              onChange: () => onChangeCalendarType(mainExports.CalendarType.LUNAR)
+            }
+          ),
+          " ",
+          "農曆"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "radio",
+              name: "runtime-calendar-type",
+              checked: dataState.calendarType === mainExports.CalendarType.SOLAR,
+              onChange: () => onChangeCalendarType(mainExports.CalendarType.SOLAR)
+            }
+          ),
+          " ",
+          "西曆"
+        ] })
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
           className: "inline-block",
           style: { paddingLeft: 20, paddingRight: 0 },
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "div",
+            dataState.calendarType === mainExports.CalendarType.LUNAR ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+              LunarDateInput,
               {
-                className: dataState.calendarType !== mainExports.CalendarType.LUNAR ? "hide" : "",
-                children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  LunarDateInput,
-                  {
-                    year: dataState.lunarYear,
-                    month: dataState.lunarMonth,
-                    day: dataState.lunarDay,
-                    leap: dataState.lunarLeap,
-                    onChangeYear: (value) => {
-                      setDataState({ ...dataState, lunarYear: value });
-                      setIsRefresh(true);
-                    },
-                    onChangeMonth: (value) => {
-                      setDataState({ ...dataState, lunarMonth: value });
-                      setIsRefresh(true);
-                    },
-                    onChangeDay: (value) => {
-                      setDataState({ ...dataState, lunarDay: value });
-                      setIsRefresh(true);
-                    },
-                    onChangeLeap: (value) => {
-                      setDataState({ ...dataState, lunarLeap: value });
-                      setIsRefresh(true);
-                    }
-                  }
-                )
+                year: dataState.lunarYear,
+                month: dataState.lunarMonth,
+                day: dataState.lunarDay,
+                leap: dataState.lunarLeap,
+                onChangeYear: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, lunarYear: value })
+                  );
+                },
+                onChangeMonth: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, lunarMonth: value })
+                  );
+                },
+                onChangeDay: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, lunarDay: value })
+                  );
+                },
+                onChangeLeap: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, lunarLeap: value })
+                  );
+                }
               }
-            ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "div",
+            ) : null,
+            dataState.calendarType === mainExports.CalendarType.SOLAR ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+              SolarDateInput,
               {
-                className: dataState.calendarType !== mainExports.CalendarType.SOLAR ? "hide" : "",
-                children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  SolarDateInput,
-                  {
-                    year: dataState.solarYear,
-                    month: dataState.solarMonth,
-                    day: dataState.solarDay,
-                    onChangeYear: (value) => {
-                      setDataState({ ...dataState, solarYear: value });
-                      setIsRefresh(true);
-                    },
-                    onChangeMonth: (value) => {
-                      setDataState({ ...dataState, solarMonth: value });
-                      setIsRefresh(true);
-                    },
-                    onChangeDay: (value) => {
-                      setDataState({ ...dataState, solarDay: value });
-                      setIsRefresh(true);
-                    }
-                  }
-                )
+                year: dataState.solarYear,
+                month: dataState.solarMonth,
+                day: dataState.solarDay,
+                onChangeYear: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, solarYear: value })
+                  );
+                },
+                onChangeMonth: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, solarMonth: value })
+                  );
+                },
+                onChangeDay: (value) => {
+                  setDataState(
+                    (prev) => syncSolarLunarCalendar({ ...prev, solarDay: value })
+                  );
+                }
               }
-            )
+            ) : null
           ]
         }
       )
@@ -68909,8 +69027,6 @@ const RuntimeConfigInputPanel = (props) => {
 
 const BuildBoardView = () => {
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const location = useLocation();
   const initialDataState = reactExports.useMemo(() => {
     return searchParamsToDataStateMapper$1(searchParams);
   }, [searchParams]);
@@ -68918,9 +69034,9 @@ const BuildBoardView = () => {
     initialDataState.config
   );
   const [runtimeConfigDataState, setRuntimeConfigDataState] = reactExports.useState(initialDataState?.runtimeConfig ?? {});
-  const [destinyConfig, setDestinyConfig] = reactExports.useState(
-    (configDataState && dataStateToDestinyConfigMapper$1(configDataState)) ?? null
-  );
+  const destinyConfig = reactExports.useMemo(() => {
+    return (configDataState && dataStateToDestinyConfigMapper$1(configDataState)) ?? null;
+  }, [configDataState]);
   const validDestinyBoard = reactExports.useMemo(() => {
     try {
       return destinyConfig && new mainExports.DestinyBoard(destinyConfig) && true;
@@ -68928,40 +69044,29 @@ const BuildBoardView = () => {
       return false;
     }
   }, [destinyConfig]);
-  reactExports.useEffect(() => {
-    setDestinyConfig(dataStateToDestinyConfigMapper$1(configDataState));
-  }, [configDataState]);
   const updateConfig = reactExports.useCallback(
     (updatedState) => {
-      if (JSON.stringify(updatedState) !== JSON.stringify(configDataState)) {
-        console.log("configDataState updated", updatedState);
-        setConfigDataState(updatedState);
+      setConfigDataState((prev) => {
+        if (JSON.stringify(updatedState) === JSON.stringify(prev)) {
+          return prev;
+        }
         setRuntimeConfigDataState({});
-      }
+        return updatedState;
+      });
     },
-    [configDataState]
+    []
   );
   const updateRuntimeConfigDataState = reactExports.useCallback(
     (updatedState) => {
-      if (JSON.stringify(updatedState) !== JSON.stringify(runtimeConfigDataState)) {
-        console.log("RuntimeConfigDataStateType updated", updatedState);
-        setRuntimeConfigDataState(updatedState);
-      }
+      setRuntimeConfigDataState((prev) => {
+        if (JSON.stringify(updatedState) === JSON.stringify(prev)) {
+          return prev;
+        }
+        return updatedState;
+      });
     },
-    [runtimeConfigDataState]
+    []
   );
-  reactExports.useEffect(() => {
-    if (configDataState) {
-      const newQuery = dataStateToSearchParamsMapper$1(
-        configDataState,
-        runtimeConfigDataState
-      ).toString();
-      if (location.search !== "?" + newQuery) {
-        console.log("updateConfig->navigate", location.search, newQuery);
-        navigate(`/buildBoard?${newQuery}`);
-      }
-    }
-  }, [configDataState, location.search, navigate, runtimeConfigDataState]);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(MainMenu, { defaultValue: "buildBoard" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
